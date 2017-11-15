@@ -13,6 +13,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		methods: {
 			registerSubmit: function() {
 				console.log("something");
+			},
+			registerBtnTrigger: function() {
+				$('.accordion').accordion('open', 0);
 			}
 		},
 		watch: {
