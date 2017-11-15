@@ -22,7 +22,15 @@ document.addEventListener("DOMContentLoaded", function() {
 				if (this.passwordConfirm === '') {
 					this.passwordConfirmError = 'password confirm can\'t be empty';
 				}
+				var accountError = this.accountError === '',
+					passwordError = this.passwordError === '',
+					passwordConfirmError = this.passwordConfirmError === '';
 
+				if (accountError && passwordError && passwordConfirmError) {
+					console.log('pass!');
+				} else {
+					console.log('fail!');
+				}
 			},
 			registerBtnTrigger: function() {
 				$('.accordion').accordion('open', 0);
