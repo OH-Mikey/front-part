@@ -17,7 +17,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		},
 		watch: {
 			account: function(input) {
-				console.log();
+				this.accountError = '';
+				if (!/^[a-z]*[A-Z]*[0-9]*$/.test(input) || input == '') {
+					this.accountError = 'error!';
+				}
 			},
 			password: function(input) {
 				this.passwordError = '';
