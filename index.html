@@ -7,6 +7,8 @@
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin="anonymous"></script>
         <script src="semantic/dist/semantic.min.js"></script>
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script type="text/javascript" src="/assets/js/main.js"></script>
         <script type="text/javascript" src="https://vuejs.org/js/vue.js"></script>
         <link rel="stylesheet" href="/assets/css/style.css">
@@ -14,12 +16,11 @@
     </head>
     <body>
         <div id="app">
-
             <div class="header">
                 <div class="ui buttons">
                     <button class="ui basic button" @click='registerBtnTrigger'>Register</button>
                     <div class="or"></div>
-                    <button class="ui basic button">Sign In</button>
+                    <button class="ui basic button" @click='loginBtnTrigger'>Sign In</button>
                 </div>
             </div>
             <div class="container">
@@ -52,8 +53,26 @@
                     </div>
                 </div>
             </div>
-
+            <div class="ui modal login_modal">
+                <i class="close icon"></i>
+                <div class="header">
+                    Login
+                </div>
+                <div class="content">
+                    <form class="ui form transition">
+                        <div class="field">
+                            <label>Account</label>
+                            <input type="text" placeholder="account" v-model='login.account'>
+                        </div>
+                        <div class="field">
+                            <label>Password</label>
+                            <input type="password" placeholder="password" v-model='login.password'>
+                            <span class="error_text" v-text="login.failMsg"></span>
+                        </div>
+                        <button class="ui button" @click='loginSubmit'>Submit</button>
+                    </form>
+                </div>
+            </div>
         </div>
-
     </body>
 </html>

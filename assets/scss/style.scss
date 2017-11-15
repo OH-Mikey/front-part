@@ -10,7 +10,7 @@ body {
 	@include background-size(5px 5px)
 }
 
-.header {
+#app > .header {
 	text-align: right
 }
 
@@ -38,6 +38,10 @@ body {
 
 	}
 
+}
+
+.login_modal{
+	width: 300px;
 }
 
 .error_text {

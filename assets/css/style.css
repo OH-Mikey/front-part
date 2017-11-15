@@ -17,7 +17,7 @@ body {
 }
 
 /* line 13, ../scss/style.scss */
-.header {
+#app > .header {
   text-align: right;
 }
 
@@ -56,6 +56,11 @@ body {
 }
 
 /* line 43, ../scss/style.scss */
+.login_modal {
+  width: 300px;
+}
+
+/* line 47, ../scss/style.scss */
 .error_text {
   color: #ff0063;
 }
