@@ -8,10 +8,52 @@
         crossorigin="anonymous"></script>
         <script src="semantic/dist/semantic.min.js"></script>
         <script type="text/javascript" src="/assets/js/main.js"></script>
+        <script type="text/javascript" src="https://vuejs.org/js/vue.js"></script>
         <link rel="stylesheet" href="/assets/css/style.css">
         <title>Document</title>
     </head>
     <body>
+        <div id="app">
+
+            <div class="header">
+                <div class="ui buttons">
+                    <button class="ui basic button">Register</button>
+                    <div class="or"></div>
+                    <button class="ui basic button">Sign In</button>
+                </div>
+            </div>
+            <div class="container">
+                <div class="_content">
+                    <h1>Record Yourself</h1>
+                    <div class="ui accordion">
+                        <div class="title">
+                            <button id="try" class="ui basic button">Try Now!</button>
+                        </div>
+                        <div class="content">
+                            <form class="ui form transition hidden">
+                                <div class="field">
+                                    <label>Account</label>
+                                    <input type="text" placeholder="account" v-model='account'>
+                                    <span class="error_text" v-text="accountError"></span>
+                                </div>
+                                <div class="field">
+                                    <label>Password</label>
+                                    <input type="password" placeholder="password" v-model='password'>
+                                    <span class="error_text" v-text="passwordError"></span>
+                                </div>
+                                <div class="field">
+                                    <label>Password Confirm</label>
+                                    <input type="password" placeholder="password confirm" v-model='passwordConfirm'>
+                                    <span class="error_text" v-text="passwordConfirmError"></span>
+                                </div>
+                                <div class="ui button" @click='registerSubmit'>Submit</div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
     </body>
 </html>

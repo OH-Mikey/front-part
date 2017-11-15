@@ -1,0 +1,45 @@
+@import "compass/css3";
+
+* {
+	margin: 0px;
+	padding: 0px
+}
+
+body {
+	@include background(linear-gradient(0deg, snow 1px, #f0f0f0 1px));
+	@include background-size(5px 5px)
+}
+
+.header {
+	text-align: right
+}
+
+.container {
+	width: 100vw;
+	height: calc(100vh - 36px);
+	position: relative;
+
+	._content {
+		display: inline-block;
+		position: absolute;
+		text-align: center;
+		width: 300px;
+		left: 50%;
+		top: 50%;
+		@include transform(translateX(-50%) translateY(-50%));
+
+		.accordion .title {
+			@include transition(opacity .5s);
+		}
+
+		.ui.basic.button {
+			@include transition(all 0.5s);
+		}
+
+	}
+
+}
+
+.error_text {
+	color: #ff0063;
+}

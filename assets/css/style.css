@@ -1,0 +1,61 @@
+/* line 3, ../scss/style.scss */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 8, ../scss/style.scss */
+body {
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjEuMCIgeDI9IjAuNSIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmYWZhIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZjBmMGYwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background: -moz-linear-gradient(90deg, #fffafa 1px, #f0f0f0 1px);
+  background: -webkit-linear-gradient(90deg, #fffafa 1px, #f0f0f0 1px);
+  background: linear-gradient(0deg, #fffafa 1px, #f0f0f0 1px);
+  -moz-background-size: 5px 5px;
+  -o-background-size: 5px 5px;
+  -webkit-background-size: 5px 5px;
+  background-size: 5px 5px;
+}
+
+/* line 13, ../scss/style.scss */
+.header {
+  text-align: right;
+}
+
+/* line 17, ../scss/style.scss */
+.container {
+  width: 100vw;
+  height: calc(100vh - 36px);
+  position: relative;
+}
+/* line 22, ../scss/style.scss */
+.container ._content {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  width: 300px;
+  left: 50%;
+  top: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+/* line 31, ../scss/style.scss */
+.container ._content .accordion .title {
+  -moz-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+/* line 35, ../scss/style.scss */
+.container ._content .ui.basic.button {
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+/* line 43, ../scss/style.scss */
+.error_text {
+  color: #ff0063;
+}
