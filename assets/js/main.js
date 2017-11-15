@@ -4,15 +4,25 @@ document.addEventListener("DOMContentLoaded", function() {
 		el: "#app",
 		data: {
 			account: '',
-			accountError: '',
 			password: '',
-			passwordError: '',
 			passwordConfirm: '',
-			passwordConfirmError: ''
+			accountError: ' ',
+			passwordError: ' ',
+			passwordConfirmError: ' '
 		},
 		methods: {
-			registerSubmit: function() {
-				console.log("something");
+			registerSubmit: function(e) {
+				e.preventDefault();
+				if (this.account === '') {
+					this.accountError = 'account can\'t be empty';
+				}
+				if (this.password === '') {
+					this.passwordError = 'password can\'t be empty';
+				}
+				if (this.passwordConfirm === '') {
+					this.passwordConfirmError = 'password confirm can\'t be empty';
+				}
+
 			},
 			registerBtnTrigger: function() {
 				$('.accordion').accordion('open', 0);
@@ -22,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			account: function(input) {
 				this.accountError = '';
 				if (!/^[a-z]*[A-Z]*[0-9]*$/.test(input) || input == '') {
-					this.accountError = 'error!';
+					this.accountError = 'account syntax error!';
 				}
 			},
 			password: function(input) {
