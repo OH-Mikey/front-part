@@ -10,7 +10,7 @@ new Vue({
         getChart().then(function(data) {
 
             var width = window.innerWidth * 0.8,
-                height = 683;
+                height = window.innerHeight * 0.8;
 
             var minX = d3.min(data, function(d) {
                 return d.x;
