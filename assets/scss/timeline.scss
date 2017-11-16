@@ -8,6 +8,11 @@ body {
 
 $mainColor: #616161;
 
+.outer_container{
+    width: 100vw;
+    height: calc(100vh - 40px) ;
+    overflow-y: scroll;
+}
 ._container {
     display: inline-block;
     width: 80%;
