@@ -19,7 +19,6 @@ var vm = new Vue({
             for (var i = 0; i < 4; i++) {
                 vm.timelines.push(i);
             }
-
         }).catch(function(error) {
             console.error(error);
         });

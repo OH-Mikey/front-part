@@ -52,7 +52,7 @@ body {
   top: 0px;
   background-color: #616161;
   width: 3px;
-  height: calc(100% + 40px);
+  height: calc(100% + 44px);
 }
 /* line 63, ../scss/timeline.scss */
 .timeline_item:after {

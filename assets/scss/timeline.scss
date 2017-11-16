@@ -57,7 +57,7 @@ $mainColor: #616161;
         top: 0px;
         background-color: $mainColor;
         width: $timelineWidth;
-        height: calc(100% + #{$timelineMargin * 2});
+        height: calc(100% + #{$timelineMargin * 2.2});
     }
 
     &:after {
