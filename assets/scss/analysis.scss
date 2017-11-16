@@ -1,5 +1,10 @@
 @import "compass/css3";
 
+._container{
+    height: 99%;
+    overflow: hidden;
+}
 .analysis_content{
     outline: 3px solid red;
+    height: 100%;
 }

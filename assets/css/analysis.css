@@ -1,4 +1,11 @@
 /* line 3, ../scss/analysis.scss */
+._container {
+  height: 99%;
+  overflow: hidden;
+}
+
+/* line 7, ../scss/analysis.scss */
 .analysis_content {
   outline: 3px solid red;
+  height: 100%;
 }
