@@ -7,37 +7,54 @@ body {
   box-sizing: border-box;
 }
 
-/* line 11, ../scss/timeline.scss */
+/* line 12, ../scss/timeline.scss */
+.timeline_item > *:not(span) {
+  width: 50%;
+  float: left;
+}
+/* line 19, ../scss/timeline.scss */
+.timeline_item .right_part {
+  height: 300px;
+}
+
+/* line 24, ../scss/timeline.scss */
+._container {
+  text-align: right;
+}
+
+/* line 28, ../scss/timeline.scss */
 .timeline_item {
   margin: 20px 0px;
   width: 90%;
+  display: inline-block;
   position: relative;
-  float: right;
   border-radius: 5px;
+  text-align: left;
   -moz-box-shadow: 2px 2px 3px 2px #616161;
   -webkit-box-shadow: 2px 2px 3px 2px #616161;
   box-shadow: 2px 2px 3px 2px #616161;
 }
-/* line 25, ../scss/timeline.scss */
+/* line 43, ../scss/timeline.scss */
 .timeline_item:after, .timeline_item:before, .timeline_item .timeline_date {
   content: "";
   display: block;
   position: absolute;
   left: -10%;
 }
-/* line 32, ../scss/timeline.scss */
+/* line 50, ../scss/timeline.scss */
 .timeline_item .timeline_date {
+  display: inline;
   top: calc(20% - 3px);
   left: calc(-10% + 12px);
 }
-/* line 37, ../scss/timeline.scss */
+/* line 56, ../scss/timeline.scss */
 .timeline_item:before {
   top: 0px;
   background-color: #616161;
   width: 3px;
   height: calc(100% + 40px);
 }
-/* line 44, ../scss/timeline.scss */
+/* line 63, ../scss/timeline.scss */
 .timeline_item:after {
   width: 15px;
   height: 15px;

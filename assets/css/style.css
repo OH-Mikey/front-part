@@ -44,19 +44,20 @@ body {
   position: relative;
   overflow-y: scroll;
 }
+
 /* line 40, ../scss/style.scss */
-.outer_container ._container {
+._container {
   display: inline-block;
   width: 80%;
   text-align: left;
 }
 
-/* line 47, ../scss/style.scss */
+/* line 46, ../scss/style.scss */
 .login_modal {
   width: 300px;
 }
 
-/* line 51, ../scss/style.scss */
+/* line 50, ../scss/style.scss */
 .error_text {
   color: #ff0063;
 }
