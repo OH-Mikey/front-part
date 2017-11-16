@@ -7,9 +7,7 @@
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin="anonymous"></script>
         <script src="semantic/dist/semantic.min.js"></script>
-
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
         <script type="text/javascript" src="https://vuejs.org/js/vue.js"></script>
         <link rel="stylesheet" href="/assets/css/style.css">
         <title>Document</title>
@@ -17,32 +15,34 @@
     <body>
         <div id="app">
             <component-header></component-header>
-            <div class="container">
-                <div class="_content">
-                    <h1>Record Yourself</h1>
-                    <div class="ui accordion">
-                        <div class="title">
-                            <button id="try" class="ui basic button">Try Now!</button>
-                        </div>
-                        <div class="content">
-                            <form class="ui form transition hidden">
-                                <div class="field">
-                                    <label>Account</label>
-                                    <input type="text" placeholder="account" v-model='account'>
-                                    <span class="error_text" v-text="accountError"></span>
-                                </div>
-                                <div class="field">
-                                    <label>Password</label>
-                                    <input type="password" placeholder="password" v-model='password'>
-                                    <span class="error_text" v-text="passwordError"></span>
-                                </div>
-                                <div class="field">
-                                    <label>Password Confirm</label>
-                                    <input type="password" placeholder="password confirm" v-model='passwordConfirm'>
-                                    <span class="error_text" v-text="passwordConfirmError"></span>
-                                </div>
-                                <button class="ui button" @click='registerSubmit'>Submit</button>
-                            </form>
+            <div class="outer_container">
+                <div class="_container">
+                    <div class="_content">
+                        <h1>Record Yourself</h1>
+                        <div class="ui accordion">
+                            <div class="title">
+                                <button id="try" class="ui basic button">Try Now!</button>
+                            </div>
+                            <div class="content">
+                                <form class="ui form transition hidden">
+                                    <div class="field">
+                                        <label>Account</label>
+                                        <input type="text" placeholder="account" v-model='account'>
+                                        <span class="error_text" v-text="accountError"></span>
+                                    </div>
+                                    <div class="field">
+                                        <label>Password</label>
+                                        <input type="password" placeholder="password" v-model='password'>
+                                        <span class="error_text" v-text="passwordError"></span>
+                                    </div>
+                                    <div class="field">
+                                        <label>Password Confirm</label>
+                                        <input type="password" placeholder="password confirm" v-model='passwordConfirm'>
+                                        <span class="error_text" v-text="passwordConfirmError"></span>
+                                    </div>
+                                    <button class="ui button" @click='registerSubmit'>Submit</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -91,6 +91,5 @@
     </div>
 </div>
 </template>
-
 <script type="text/javascript" src="/assets/components/component_header.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>

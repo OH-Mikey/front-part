@@ -16,7 +16,7 @@ body {
   background-size: 5px 5px;
 }
 
-/* line 14, ../scss/style.scss */
+/* line 13, ../scss/style.scss */
 #app > .header {
   display: inline-block;
   width: 100vw;
@@ -26,25 +26,32 @@ body {
 #app > .header .right_part, #app > .header .left_part {
   width: 50%;
 }
-/* line 21, ../scss/style.scss */
+/* line 22, ../scss/style.scss */
 #app > .header .right_part {
   float: right;
   text-align: right;
 }
-/* line 25, ../scss/style.scss */
+/* line 27, ../scss/style.scss */
 #app > .header .left_part {
   float: left;
   text-align: left;
 }
 
-/* line 32, ../scss/style.scss */
-.container {
+/* line 34, ../scss/style.scss */
+.outer_container {
   width: 100vw;
-  height: calc(100vh - 36px);
+  height: calc(100vh - 40px);
   position: relative;
+  overflow-y: scroll;
 }
-/* line 37, ../scss/style.scss */
-.container ._content {
+/* line 40, ../scss/style.scss */
+.outer_container ._container {
+  display: inline-block;
+  width: 80%;
+  text-align: left;
+}
+/* line 46, ../scss/style.scss */
+.outer_container ._content {
   display: inline-block;
   position: absolute;
   text-align: center;
@@ -56,27 +63,27 @@ body {
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
-/* line 46, ../scss/style.scss */
-.container ._content .accordion .title {
+/* line 55, ../scss/style.scss */
+.outer_container ._content .accordion .title {
   -moz-transition: opacity 0.5s;
   -o-transition: opacity 0.5s;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
-/* line 50, ../scss/style.scss */
-.container ._content .ui.basic.button {
+/* line 59, ../scss/style.scss */
+.outer_container ._content .ui.basic.button {
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
-/* line 58, ../scss/style.scss */
+/* line 67, ../scss/style.scss */
 .login_modal {
   width: 300px;
 }
 
-/* line 62, ../scss/style.scss */
+/* line 71, ../scss/style.scss */
 .error_text {
   color: #ff0063;
 }
