@@ -1,0 +1,49 @@
+/* line 3, ../scss/timeline.scss */
+body {
+  width: 100vw;
+  text-align: center;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 8, ../scss/timeline.scss */
+._container {
+  display: inline-block;
+  width: 80%;
+  outline: 1px solid red;
+  text-align: left;
+}
+/* line 14, ../scss/timeline.scss */
+._container .timeline_item {
+  margin: 3px 0px;
+  width: 90%;
+  position: relative;
+  float: right;
+  -moz-box-shadow: 2px 2px 3px 2px #616161;
+  -webkit-box-shadow: 2px 2px 3px 2px #616161;
+  box-shadow: 2px 2px 3px 2px #616161;
+}
+/* line 23, ../scss/timeline.scss */
+._container .timeline_item:after, ._container .timeline_item:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -9%;
+}
+/* line 30, ../scss/timeline.scss */
+._container .timeline_item:after {
+  outline: 1px solid black;
+  top: 0px;
+  background-color: red;
+  width: 5px;
+  height: calc(100% + 6px);
+}
+/* line 37, ../scss/timeline.scss */
+._container .timeline_item:before {
+  border: 1px solid red;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: 0px;
+}
