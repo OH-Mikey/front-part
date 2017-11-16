@@ -76,10 +76,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             },
             passwordConfirm: function(input) {
+                this.passwordConfirmError = '';
                 if (this.password !== input) {
                     this.passwordConfirmError = 'password confirm not match!';
-                } else {
-                    this.passwordConfirmError = '';
                 }
             }
         },
