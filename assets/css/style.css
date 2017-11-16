@@ -50,40 +50,13 @@ body {
   width: 80%;
   text-align: left;
 }
-/* line 46, ../scss/style.scss */
-.outer_container ._content {
-  display: inline-block;
-  position: absolute;
-  text-align: center;
-  width: 300px;
-  left: 50%;
-  top: 50%;
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
-/* line 55, ../scss/style.scss */
-.outer_container ._content .accordion .title {
-  -moz-transition: opacity 0.5s;
-  -o-transition: opacity 0.5s;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
-}
-/* line 59, ../scss/style.scss */
-.outer_container ._content .ui.basic.button {
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
 
-/* line 67, ../scss/style.scss */
+/* line 47, ../scss/style.scss */
 .login_modal {
   width: 300px;
 }
 
-/* line 71, ../scss/style.scss */
+/* line 51, ../scss/style.scss */
 .error_text {
   color: #ff0063;
 }
