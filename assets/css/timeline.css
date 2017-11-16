@@ -7,16 +7,15 @@ body {
   box-sizing: border-box;
 }
 
-/* line 8, ../scss/timeline.scss */
+/* line 11, ../scss/timeline.scss */
 ._container {
   display: inline-block;
   width: 80%;
-  outline: 1px solid red;
   text-align: left;
 }
-/* line 14, ../scss/timeline.scss */
+/* line 16, ../scss/timeline.scss */
 ._container .timeline_item {
-  margin: 3px 0px;
+  margin: 20px 0px;
   width: 90%;
   position: relative;
   float: right;
@@ -24,26 +23,32 @@ body {
   -webkit-box-shadow: 2px 2px 3px 2px #616161;
   box-shadow: 2px 2px 3px 2px #616161;
 }
-/* line 23, ../scss/timeline.scss */
-._container .timeline_item:after, ._container .timeline_item:before {
+/* line 29, ../scss/timeline.scss */
+._container .timeline_item:after, ._container .timeline_item:before, ._container .timeline_item .timeline_date {
   content: "";
   display: block;
   position: absolute;
-  left: -9%;
+  left: -5%;
 }
-/* line 30, ../scss/timeline.scss */
-._container .timeline_item:after {
-  outline: 1px solid black;
-  top: 0px;
-  background-color: red;
-  width: 5px;
-  height: calc(100% + 6px);
+/* line 36, ../scss/timeline.scss */
+._container .timeline_item .timeline_date {
+  top: calc(20% - 3px);
+  left: calc(-5% + 12px);
 }
-/* line 37, ../scss/timeline.scss */
+/* line 41, ../scss/timeline.scss */
 ._container .timeline_item:before {
-  border: 1px solid red;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
   top: 0px;
+  background-color: #616161;
+  width: 3px;
+  height: calc(100% + 40px);
+}
+/* line 48, ../scss/timeline.scss */
+._container .timeline_item:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  top: 20%;
+  left: calc(-5% - 6px);
+  border: 3px solid #616161;
+  background-color: white;
 }
