@@ -70,15 +70,26 @@
         </div>
     </body>
 </html>
-
 <template id="component_header">
-    <div class="header" >
-        <div class="ui buttons">
+<div class="header">
+    <div class="left_part">
+        <div v-show='loginStatus'>
+            <a href="/profile.html"><button class="ui basic button">Profile</button></a>
+            <a href="/timeline.html"><button class="ui basic button">Timeline</button></a>
+            <a href="/analysis.html"><button class="ui basic button">Analysis</button></a>
+        </div>
+    </div>
+    <div class="right_part">
+        <div class="ui buttons not_login" v-show='!loginStatus'>
             <button class="ui basic button" @click='registerBtnTrigger'>Register</button>
             <div class="or"></div>
             <button class="ui basic button" @click='loginBtnTrigger'>Sign In</button>
         </div>
+        <div class="ui login" v-show='loginStatus'>
+            <button class="ui basic button" @click='logout'>logout</button>
+        </div>
     </div>
+</div>
 </template>
 
 <script type="text/javascript" src="/assets/components/component_header.js"></script>

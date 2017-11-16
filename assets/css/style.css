@@ -16,19 +16,34 @@ body {
   background-size: 5px 5px;
 }
 
-/* line 13, ../scss/style.scss */
+/* line 14, ../scss/style.scss */
 #app > .header {
-  text-align: right;
+  display: inline-block;
+  width: 100vw;
   height: 36px;
 }
-
 /* line 18, ../scss/style.scss */
+#app > .header .right_part, #app > .header .left_part {
+  width: 50%;
+}
+/* line 21, ../scss/style.scss */
+#app > .header .right_part {
+  float: right;
+  text-align: right;
+}
+/* line 25, ../scss/style.scss */
+#app > .header .left_part {
+  float: left;
+  text-align: left;
+}
+
+/* line 32, ../scss/style.scss */
 .container {
   width: 100vw;
   height: calc(100vh - 36px);
   position: relative;
 }
-/* line 23, ../scss/style.scss */
+/* line 37, ../scss/style.scss */
 .container ._content {
   display: inline-block;
   position: absolute;
@@ -41,14 +56,14 @@ body {
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
-/* line 32, ../scss/style.scss */
+/* line 46, ../scss/style.scss */
 .container ._content .accordion .title {
   -moz-transition: opacity 0.5s;
   -o-transition: opacity 0.5s;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
-/* line 36, ../scss/style.scss */
+/* line 50, ../scss/style.scss */
 .container ._content .ui.basic.button {
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -56,12 +71,12 @@ body {
   transition: all 0.5s;
 }
 
-/* line 44, ../scss/style.scss */
+/* line 58, ../scss/style.scss */
 .login_modal {
   width: 300px;
 }
 
-/* line 48, ../scss/style.scss */
+/* line 62, ../scss/style.scss */
 .error_text {
   color: #ff0063;
 }
