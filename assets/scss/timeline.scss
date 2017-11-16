@@ -29,6 +29,7 @@ $mainColor: #616161;
         width: 90%;
         position: relative;
         float: right;
+        border-radius: 5px;
         @include box-shadow(2px 2px 3px 2px $mainColor);
 
         &:after, &:before, .timeline_date {

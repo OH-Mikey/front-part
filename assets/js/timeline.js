@@ -1,5 +1,20 @@
-document.addEventListener("DOMContentLoaded", function() {
-    $('.outer_container').scroll(function(event) {
-        console.log('scroll');
-    });
+new Vue({
+    el: "#app",
+    data: {},
+        components: {
+            componentHeader: componentHeader
+        },
+    created: function() {
+        console.log('created');
+
+        document.querySelector(".outer_container").onscroll = function() {
+
+        };
+
+
+    }
 });
+
+function my() {
+    console.log("my");
+}

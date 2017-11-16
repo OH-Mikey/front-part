@@ -26,30 +26,31 @@ body {
   width: 90%;
   position: relative;
   float: right;
+  border-radius: 5px;
   -moz-box-shadow: 2px 2px 3px 2px #616161;
   -webkit-box-shadow: 2px 2px 3px 2px #616161;
   box-shadow: 2px 2px 3px 2px #616161;
 }
-/* line 34, ../scss/timeline.scss */
+/* line 35, ../scss/timeline.scss */
 ._container .timeline_item:after, ._container .timeline_item:before, ._container .timeline_item .timeline_date {
   content: "";
   display: block;
   position: absolute;
   left: -10%;
 }
-/* line 41, ../scss/timeline.scss */
+/* line 42, ../scss/timeline.scss */
 ._container .timeline_item .timeline_date {
   top: calc(20% - 3px);
   left: calc(-10% + 12px);
 }
-/* line 46, ../scss/timeline.scss */
+/* line 47, ../scss/timeline.scss */
 ._container .timeline_item:before {
   top: 0px;
   background-color: #616161;
   width: 3px;
   height: calc(100% + 40px);
 }
-/* line 53, ../scss/timeline.scss */
+/* line 54, ../scss/timeline.scss */
 ._container .timeline_item:after {
   width: 15px;
   height: 15px;
