@@ -43,21 +43,22 @@ body {
   height: calc(100vh - 40px);
   position: relative;
   overflow-y: scroll;
+  text-align: center;
 }
 
-/* line 40, ../scss/style.scss */
+/* line 41, ../scss/style.scss */
 ._container {
   display: inline-block;
   width: 80%;
   text-align: left;
 }
 
-/* line 46, ../scss/style.scss */
+/* line 47, ../scss/style.scss */
 .login_modal {
   width: 300px;
 }
 
-/* line 50, ../scss/style.scss */
+/* line 51, ../scss/style.scss */
 .error_text {
   color: #ff0063;
 }
