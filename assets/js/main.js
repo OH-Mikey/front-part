@@ -16,6 +16,43 @@ document.addEventListener("DOMContentLoaded", function() {
                 failMsg: ''
             }
         },
+        methods:{
+            loginSubmit: function(e) {
+                e.preventDefault();
+                var vm = this;
+
+                axios({
+                    method: 'get',
+                    url: '/',
+                }).then(function(res) {
+                    window.location.href = '/profile.html';
+                }).catch(function(error) {
+                    vm.login.failMsg = 'wrong account or password';
+                });
+            },
+            registerSubmit: function(e) {
+                e.preventDefault();
+                if (this.account === '') {
+                    this.accountError = 'account can\'t be empty';
+                }
+                if (this.password === '') {
+                    this.passwordError = 'password can\'t be empty';
+                }
+                if (this.passwordConfirm === '') {
+                    this.passwordConfirmError = 'password confirm can\'t be empty';
+                }
+                var accountError = this.accountError === '',
+                    passwordError = this.passwordError === '',
+                    passwordConfirmError = this.passwordConfirmError === '';
+
+                if (accountError && passwordError && passwordConfirmError) {
+                    console.log('pass!');
+                    window.location.href = '/profile.html';
+                } else {
+                    console.log('fail!');
+                }
+            },
+        },
         watch: {
             account: function(input) {
                 this.accountError = '';
