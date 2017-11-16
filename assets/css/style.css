@@ -19,15 +19,16 @@ body {
 /* line 13, ../scss/style.scss */
 #app > .header {
   text-align: right;
+  height: 36px;
 }
 
-/* line 17, ../scss/style.scss */
+/* line 18, ../scss/style.scss */
 .container {
   width: 100vw;
   height: calc(100vh - 36px);
   position: relative;
 }
-/* line 22, ../scss/style.scss */
+/* line 23, ../scss/style.scss */
 .container ._content {
   display: inline-block;
   position: absolute;
@@ -40,14 +41,14 @@ body {
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
-/* line 31, ../scss/style.scss */
+/* line 32, ../scss/style.scss */
 .container ._content .accordion .title {
   -moz-transition: opacity 0.5s;
   -o-transition: opacity 0.5s;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
-/* line 35, ../scss/style.scss */
+/* line 36, ../scss/style.scss */
 .container ._content .ui.basic.button {
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -55,12 +56,12 @@ body {
   transition: all 0.5s;
 }
 
-/* line 43, ../scss/style.scss */
+/* line 44, ../scss/style.scss */
 .login_modal {
   width: 300px;
 }
 
-/* line 47, ../scss/style.scss */
+/* line 48, ../scss/style.scss */
 .error_text {
   color: #ff0063;
 }

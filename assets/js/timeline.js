@@ -1,20 +1,17 @@
-new Vue({
+var vm = new Vue({
     el: "#app",
-    data: {},
-        components: {
-            componentHeader: componentHeader
-        },
+    data: {
+        loginStatus: true
+    },
+    components: {
+        componentHeader: componentHeader
+    },
     created: function() {
         console.log('created');
-
-        document.querySelector(".outer_container").onscroll = function() {
-
+    },
+    mounted: function() {
+        document.querySelector('.outer_container').onscroll = function() {
+            console.log('hello');
         };
-
-
     }
 });
-
-function my() {
-    console.log("my");
-}

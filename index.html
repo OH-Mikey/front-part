@@ -9,20 +9,14 @@
         <script src="semantic/dist/semantic.min.js"></script>
 
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <script type="text/javascript" src="/assets/js/main.js"></script>
+
         <script type="text/javascript" src="https://vuejs.org/js/vue.js"></script>
         <link rel="stylesheet" href="/assets/css/style.css">
         <title>Document</title>
     </head>
     <body>
         <div id="app">
-            <div class="header">
-                <div class="ui buttons">
-                    <button class="ui basic button" @click='registerBtnTrigger'>Register</button>
-                    <div class="or"></div>
-                    <button class="ui basic button" @click='loginBtnTrigger'>Sign In</button>
-                </div>
-            </div>
+            <component-header></component-header>
             <div class="container">
                 <div class="_content">
                     <h1>Record Yourself</h1>
@@ -76,3 +70,16 @@
         </div>
     </body>
 </html>
+
+<template id="component_header">
+    <div class="header" >
+        <div class="ui buttons">
+            <button class="ui basic button" @click='registerBtnTrigger'>Register</button>
+            <div class="or"></div>
+            <button class="ui basic button" @click='loginBtnTrigger'>Sign In</button>
+        </div>
+    </div>
+</template>
+
+<script type="text/javascript" src="/assets/components/component_header.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>

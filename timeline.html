@@ -15,8 +15,8 @@
     </head>
     <body>
         <div id="app">
-            <component-header></component-header>
-            <div class="outer_container" onscroll="my()">
+            <component-header :login-status="loginStatus"></component-header>
+            <div class="outer_container">
                 <div class="_container">
                     <div class="timeline_item">
                         <span class="timeline_date">11/19</span>
@@ -83,11 +83,14 @@
 </html>
 
 <template id="component_header">
-    <div class="header" >
-        <div class="ui buttons">
+    <div class="header">
+        <div class="ui buttons not_login" v-show='!loginStatus'>
             <button class="ui basic button" @click='registerBtnTrigger'>Register</button>
             <div class="or"></div>
             <button class="ui basic button" @click='loginBtnTrigger'>Sign In</button>
+        </div>
+        <div class="ui login" v-show='loginStatus'>
+            <button class="ui basic button">logout</button>
         </div>
     </div>
 </template>

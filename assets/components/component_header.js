@@ -42,9 +42,11 @@ var componentHeader = Vue.component("component-header", {
             $('.login_modal').modal('show');
         }
     },
+    props: ['loginStatus'],
     data: function() {
-        return {
-            msg: "hello"
-        };
+        return {};
+    },
+    mounted: function() {
+        console.log(this.loginStatus);
     }
 });
