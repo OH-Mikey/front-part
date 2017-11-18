@@ -1,0 +1,7 @@
+{
+		"lockfileVersion": 1,
+		"dependencies": {
+				"gulp": "^3.9.1",
+				"semantic-ui": "^2.2.13"
+		}
+}
