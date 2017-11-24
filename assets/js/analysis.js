@@ -13,10 +13,10 @@ new Vue({
                 height = window.innerHeight * 0.8;
 
             var minX = d3.min(data, function(d) {
-                return d.x;
+                return d.x.number;
             });
             var maxX = d3.max(data, function(d) {
-                return d.x;
+                return d.x.number;
             });
             var minY = d3.min(data, function(d) {
                 return d.y;
@@ -36,7 +36,11 @@ new Vue({
             var axisX = d3.svg.axis()
                 .scale(scaleX)
                 .orient("bottom")
-                .ticks(20);
+                .ticks(20)
+                .tickFormat(function(d) {
+                    return data[d].x.words;
+                });
+
 
             var axisY = d3.svg.axis()
                 .scale(scaleY)
@@ -53,7 +57,7 @@ new Vue({
 
             var line = d3.svg.line()
                 .x(function(d) {
-                    return scaleX(d.x);
+                    return scaleX(d.x.number);
                 })
                 .y(function(d) {
                     return scaleY(d.y);
@@ -104,10 +108,12 @@ function getChart(input) {
     return new Promise(function(resolve, reject) {
         axios({
             method: 'get',
-            // url: '/',
-            url: 'http://localhost:3000/chart'
+            url: '/',
+            // url: 'http://localhost:3000/chart'
         }).then(function(res) {
-            resolve(res.data);
+            // resolve(res.data);
+            resolve(array)
+
         }).catch(function(error) {
             reject(error);
         });
@@ -117,12 +123,18 @@ function getChart(input) {
 var array = [];
 for (var i = 0; i < 400; i++) {
     array.push({
-        x: i,
+        x: {
+            number: i,
+            words: '11/12'
+        },
         y: Math.round(Math.random() * 100)
     });
     array.push({
-        x: i+1,
-        y:0
+        x: {
+            number: i,
+            words: ''
+        },
+        y: 0
     });
 }
 console.log(JSON.stringify(array));
