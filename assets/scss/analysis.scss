@@ -17,7 +17,7 @@
 #offsetId.run {
     stroke: #000000;
     stroke-width: 3px;
-    @include animation(move 5s forwards);
+    @include animation(move 3s forwards);
 }
 
 @include keyframes (move) {
@@ -28,7 +28,7 @@
         stroke: #ff0063;
     }
     75% {
-        stroke: yellow;
+        stroke: #9095D2;
     }
     100% {
         stroke: #A1DCD4;

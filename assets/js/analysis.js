@@ -115,7 +115,7 @@ function getChart(input) {
 }
 
 var array = [];
-for (var i = 0; i < 25; i++) {
+for (var i = 0; i < 400; i++) {
     array.push({
         x: i,
         y: Math.round(Math.random() * 100)
@@ -125,4 +125,5 @@ for (var i = 0; i < 25; i++) {
         y:0
     });
 }
-console.log(array);
+console.log(JSON.stringify(array));
+
