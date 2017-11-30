@@ -2,8 +2,8 @@ function TaskModel() {
     var vm = this;
     this.number = ko.observable(10);
     this.events = ko.observableArray([{
-        theadOptions: ko.observableArray(),
-        theadWins: ko.observableArray(),
+        theadOptions: ko.observableArray(0),
+        theadWins: ko.observableArray(0),
         levels: ko.observableArray([{
             options: ko.observableArray(),
             wins: ko.observableArray()
@@ -56,12 +56,13 @@ function TaskModel() {
     };
 
     this.choseNewOption = function(eventId, levelId, optionsId) {
-        console.log(eventId(), levelId(), optionsId());
+        console.log(vm.events()[eventId()].levels()[levelId()] );
+        // console.log(eventId(), levelId(), optionsId());
     };
 
     this.choseNewWin = function(eventId, levelId, winId) {
         console.log(eventId(), levelId(), winId());
-    }
+    };
 
 }
 

@@ -14,50 +14,40 @@
     <title>Document</title>
 </head>
 <style>
-
+    table {
+        margin: 50px;
+    }
 </style>
 
 <body>
     <button class="ui button" data-bind="click: createEvent"> 新增Event </button>
     <!-- ko foreach: {data: events, as: 'event' } -->
     <table class="" border="1">
-        <thead>
-            <tr>
-                <!-- ko foreach: {data: theadOptions, as: 'theadOption' } -->
-                <td data-bind="text: '條件' + ($index() + 1) "></td>
-                <!-- /ko -->
 
-                <td>新增條件</td>
-                <!-- ko foreach: {data: theadWins, as: 'theadOption' } -->
-                <td data-bind="text: '獎勵' + ($index() + 1) "></td>
-                <!-- /ko -->
-                <td>新增獎勵</td>
-            </tr>
-        </thead>
         <tbody>
             <tr>
                 <!-- ko foreach: {data: theadOptions, as: 'theadOption' } -->
                 <td>
                     <div class="ui input">
-                        <button class="ui button blue" data-bind="click: function() { $root.choseNewOption($parentContext.$index, function(){return 0;}, $index); } ">+</button>
+                        <span data-bind="text: '條件' + ($index() + 1)"></span>
                     </div>
                 </td>
                 <!-- /ko -->
 
                 <td data-bind="attr: { rowspan: levels().length + 1 } " rowspan="3">
-                    <button class="ui button" data-bind="click: function() { $root.createOption($index) } ">+</button>
+                    <button class="ui button" data-bind="click: function() { $root.createOption($index) } ">新增條件</button>
                 </td>
 
                 <!-- ko foreach: {data: theadWins, as: 'theadOption' } -->
                 <td>
                     <div class="ui input">
-                        <button class="ui button blue" data-bind="click: function() { $root.choseNewWin($parentContext.$index, function(){return 0;}, $index); } ">+</button>
+                        <span data-bind="text: '獎勵' + ($index() + 1)"></span>
                     </div>
                 </td>
                 <!-- /ko -->
 
                 <td data-bind="attr: { rowspan: levels().length + 1 } " rowspan="3">
-                    <button class="ui button" data-bind="click: function() { $root.createWin($index) }">win+</button>
+                    <button class="ui button" data-bind="click: function() { $root.createWin($index) }">新增獎勵</button>
                 </td>
             </tr>
 
@@ -70,7 +60,7 @@
                         click: function() {
                             $root.choseNewOption($parentContext.$parentContext.$index,
                             function() {
-                                return $parentContext.$index() + 1;
+                                return $parentContext.$index();
                             }, $index);
                         }">+</button>
                     </div>
@@ -84,7 +74,7 @@
                         click: function() {
                             $root.choseNewWin($parentContext.$parentContext.$index,
                             function() {
-                                return $parentContext.$index() + 1;
+                                return $parentContext.$index();
                             }, $index)
                         }
                         ">+</button>
