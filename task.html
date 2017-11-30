@@ -21,12 +21,12 @@
 
 <body>
     <button class="ui button" data-bind="click: createEvent"> 新增Event </button>
-    <!-- ko foreach: {data: events, as: 'event' } -->
+    <!-- ko foreach: events -->
     <table class="" border="1">
 
         <tbody>
             <tr>
-                <!-- ko foreach: {data: theadOptions, as: 'theadOption' } -->
+                <!-- ko foreach: theadOptions -->
                 <td>
                     <div class="ui input">
                         <span data-bind="text: '條件' + ($index() + 1)"></span>
@@ -38,7 +38,7 @@
                     <button class="ui button" data-bind="click: function() { $root.createOption($index) } ">新增條件</button>
                 </td>
 
-                <!-- ko foreach: {data: theadWins, as: 'theadOption' } -->
+                <!-- ko foreach: theadWins -->
                 <td>
                     <div class="ui input">
                         <span data-bind="text: '獎勵' + ($index() + 1)"></span>
@@ -51,9 +51,9 @@
                 </td>
             </tr>
 
-            <!-- ko foreach: {data: levels, as: 'level' } -->
+            <!-- ko foreach: levels -->
             <tr>
-                <!-- ko foreach: {data: options, as: 'option' } -->
+                <!-- ko foreach: options -->
                 <td>
                     <div class="ui input">
                         <button class="ui button blue" data-bind="
@@ -67,7 +67,7 @@
                 </td>
                 <!-- /ko -->
 
-                <!-- ko foreach: {data: wins, as: 'win' } -->
+                <!-- ko foreach: wins -->
                 <td>
                     <div class="ui input">
                         <button class="ui button blue" data-bind="
