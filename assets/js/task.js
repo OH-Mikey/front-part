@@ -68,9 +68,6 @@ function TaskModel() {
         currentOption({
             type: 'changed! Option'
         });
-        console.log(currentOption());
-        $('.ui.basic.modal')
-            .modal('show');
     };
 
     this.choseNewWin = function(eventId, levelId, winId) {
@@ -79,22 +76,10 @@ function TaskModel() {
         currentWin({
             type: 'changed! Win'
         });
-        console.log(currentWin());
-        $('.ui.basic.modal')
-            .modal('show');
     };
 
     this.createEvent();
-
 }
 
 var _task = document.querySelector('#taskId'),
     task = ko.applyBindings(new TaskModel(), _task);
-
-document.addEventListener("DOMContentLoaded", function() {
-    $('.ui.styled.accordion').accordion({
-        selector: {
-            trigger: '.title'
-        }
-    });
-});
