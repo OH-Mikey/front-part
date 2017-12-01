@@ -1,22 +1,19 @@
 function TaskModel() {
     var vm = this;
     this.number = ko.observable(10);
-    this.events = ko.observableArray([{
-        theadOptions: ko.observableArray(),
-        theadWins: ko.observableArray(),
-        levels: ko.observableArray([{
-            options: ko.observableArray(),
-            wins: ko.observableArray()
-        }]),
-    }]);
+    this.events = ko.observableArray();
 
     this.createEvent = function(index) {
         vm.events.push({
             theadOptions: ko.observableArray([1]),
             theadWins: ko.observableArray([1]),
             levels: ko.observableArray([{
-                options: ko.observableArray([1]),
-                wins: ko.observableArray([1])
+                options: ko.observableArray([ko.observable({
+                    type: '?'
+                })]),
+                wins: ko.observableArray([ko.observable({
+                    type: '?'
+                })])
             }])
         });
     };
@@ -27,10 +24,14 @@ function TaskModel() {
             tempOptionArray = [];
 
         for (var i = 0; i < currentObj.theadOptions().length; i++) {
-            tempOptionArray.push(currentObj.levels()[0].options()[0]);
+            tempOptionArray.push(ko.observable({
+                type: '?'
+            }));
         }
         for (i = 0; i < currentObj.theadWins().length; i++) {
-            tempOptionArray.push(currentObj.levels()[0].wins()[0]);
+            tempOptionArray.push(ko.observable({
+                type: '?'
+            }));
         }
 
         currentObj.levels.push({
@@ -44,7 +45,7 @@ function TaskModel() {
         currentObj.theadOptions.push(1);
         for (var i = 0; i < currentObj.levels().length; i++) {
             currentObj.levels()[i].options.push(ko.observable({
-                type: 'fish',
+                type: '?',
                 value: '300'
             }));
         }
@@ -55,7 +56,7 @@ function TaskModel() {
         currentObj.theadWins.push(1);
         for (var i = 0; i < currentObj.levels().length; i++) {
             currentObj.levels()[i].wins.push(ko.observable({
-                type: '%',
+                type: '?',
                 value: 123
             }));
         }
@@ -64,18 +65,36 @@ function TaskModel() {
     this.choseNewOption = function(eventId, levelId, optionsId) {
         var currentOption = vm.events()[eventId()].levels()[levelId()].options()[optionsId()];
         console.log(currentOption());
-        currentOption(123);
+        currentOption({
+            type: 'changed! Option'
+        });
         console.log(currentOption());
+        $('.ui.basic.modal')
+            .modal('show');
     };
 
     this.choseNewWin = function(eventId, levelId, winId) {
         var currentWin = vm.events()[eventId()].levels()[levelId()].wins()[winId()];
         console.log(currentWin());
-        currentWin(123);
+        currentWin({
+            type: 'changed! Win'
+        });
         console.log(currentWin());
+        $('.ui.basic.modal')
+            .modal('show');
     };
+
+    this.createEvent();
 
 }
 
 var _task = document.querySelector('#taskId'),
     task = ko.applyBindings(new TaskModel(), _task);
+
+document.addEventListener("DOMContentLoaded", function() {
+    $('.ui.styled.accordion').accordion({
+        selector: {
+            trigger: '.title'
+        }
+    });
+});
