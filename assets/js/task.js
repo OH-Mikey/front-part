@@ -8,40 +8,40 @@ function TaskModel() {
         key: ko.observable('win'),
         toggle: function(input, event) {
             var container = event.currentTarget.parentNode,
-            childPart = container.querySelectr('.child_class');
-            container.classList.add('chosed');
+                childPart = container.querySelector('.child_class');
+            vm.choseAndRemoveClass(container);
         },
         children: ko.observableArray([{
             name: ko.observable('電子遊戲'),
             key: ko.observable('win_game'),
             toggle: function(input, event) {
                 var container = event.currentTarget.parentNode,
-                childPart = container.querySelectr('.child_class');
-                container.classList.add('chosed');
+                    childPart = container.querySelector('.child_class');
+                vm.choseAndRemoveClass(container);
             },
             children: ko.observableArray([{
                 name: ko.observable('fish'),
                 key: ko.observable('win_game_fish'),
                 toggle: function(input, event) {
                     var container = event.currentTarget.parentNode,
-                    childPart = container.querySelectr('.child_class');
-                    container.classList.add('chosed');
+                        childPart = container.querySelector('.child_class');
+                    vm.choseAndRemoveClass(container);
                 },
             }, {
                 name: ko.observable('鋼鐵人'),
                 key: ko.observable('win_game_鋼鐵人'),
                 toggle: function(input, event) {
                     var container = event.currentTarget.parentNode,
-                    childPart = container.querySelectr('.child_class');
-                    container.classList.add('chosed');
+                        childPart = container.querySelector('.child_class');
+                    vm.choseAndRemoveClass(container);
                 }
             }, {
                 name: ko.observable('其他1'),
                 key: ko.observable('win_game_其他1'),
                 toggle: function(input, event) {
                     var container = event.currentTarget.parentNode,
-                    childPart = container.querySelectr('.child_class');
-                    container.classList.add('chosed');
+                        childPart = container.querySelector('.child_class');
+                    vm.choseAndRemoveClass(container);
                 }
             }])
         }, {
@@ -49,24 +49,24 @@ function TaskModel() {
             key: ko.observable('win_lottery'),
             toggle: function(input, event) {
                 var container = event.currentTarget.parentNode,
-                childPart = container.querySelectr('.child_class');
-                container.classList.add('chosed');
+                    childPart = container.querySelector('.child_class');
+                vm.choseAndRemoveClass(container);
             },
             children: ko.observableArray([{
                 name: ko.observable('六合彩'),
                 key: ko.observable('win_lottery_六合彩'),
                 toggle: function(input, event) {
                     var container = event.currentTarget.parentNode,
-                    childPart = container.querySelectr('.child_class');
-                    container.classList.add('chosed');
+                        childPart = container.querySelector('.child_class');
+                    vm.choseAndRemoveClass(container);
                 },
             }, {
                 name: ko.observable('11選11'),
                 key: ko.observable('win_lottery_11選11'),
                 toggle: function(input, event) {
                     var container = event.currentTarget.parentNode,
-                    childPart = container.querySelectr('.child_class');
-                    container.classList.add('chosed');
+                        childPart = container.querySelector('.child_class');
+                    vm.choseAndRemoveClass(container);
                 }
             }])
         }])
@@ -76,40 +76,40 @@ function TaskModel() {
         key: ko.observable('lose'),
         toggle: function(input, event) {
             var container = event.currentTarget.parentNode,
-            childPart = container.querySelectr('.child_class');
-            container.classList.add('chosed');
+                childPart = container.querySelector('.child_class');
+            vm.choseAndRemoveClass(container);
         },
         children: ko.observableArray([{
             name: ko.observable('電子遊戲'),
             key: ko.observable('lose_game'),
             toggle: function(input, event) {
                 var container = event.currentTarget.parentNode,
-                childPart = container.querySelectr('.child_class');
-                container.classList.add('chosed');
+                    childPart = container.querySelector('.child_class');
+                vm.choseAndRemoveClass(container);
             },
             children: ko.observableArray([{
                 name: ko.observable('fish'),
                 key: ko.observable('lose_game_fish'),
                 toggle: function(input, event) {
                     var container = event.currentTarget.parentNode,
-                    childPart = container.querySelectr('.child_class');
-                    container.classList.add('chosed');
+                        childPart = container.querySelector('.child_class');
+                    vm.choseAndRemoveClass(container);
                 },
             }, {
                 name: ko.observable('鋼鐵人'),
                 key: ko.observable('lose_game_鋼鐵人'),
                 toggle: function(input, event) {
                     var container = event.currentTarget.parentNode,
-                    childPart = container.querySelectr('.child_class');
-                    container.classList.add('chosed');
+                        childPart = container.querySelector('.child_class');
+                    vm.choseAndRemoveClass(container);
                 }
             }, {
                 name: ko.observable('其他1'),
                 key: ko.observable('lose_game_其他1'),
                 toggle: function(input, event) {
                     var container = event.currentTarget.parentNode,
-                    childPart = container.querySelectr('.child_class');
-                    container.classList.add('chosed');
+                        childPart = container.querySelector('.child_class');
+                    vm.choseAndRemoveClass(container);
                 }
             }])
         }, {
@@ -117,24 +117,24 @@ function TaskModel() {
             key: ko.observable('lose_lottery'),
             toggle: function(input, event) {
                 var container = event.currentTarget.parentNode,
-                childPart = container.querySelectr('.child_class');
-                container.classList.add('chosed');
+                    childPart = container.querySelector('.child_class');
+                vm.choseAndRemoveClass(container);
             },
             children: ko.observableArray([{
                 name: ko.observable('六合彩'),
                 key: ko.observable('lose_lottery_六合彩'),
                 toggle: function(input, event) {
                     var container = event.currentTarget.parentNode,
-                    childPart = container.querySelectr('.child_class');
-                    container.classList.add('chosed');
+                        childPart = container.querySelector('.child_class');
+                    vm.choseAndRemoveClass(container);
                 },
             }, {
                 name: ko.observable('11選11'),
                 key: ko.observable('lose_lottery_11選11'),
                 toggle: function(input, event) {
                     var container = event.currentTarget.parentNode,
-                    childPart = container.querySelectr('.child_class');
-                    container.classList.add('chosed');
+                        childPart = container.querySelector('.child_class');
+                    vm.choseAndRemoveClass(container);
                 }
             }])
         }])
@@ -200,20 +200,20 @@ function TaskModel() {
     };
 
     this.choseNewOption = function(eventId, levelId, optionsId) {
-        var currentOption = vm.events()[eventId()].levels()[levelId()].options()[optionsId()];
-        container,
-        childPart = container.querySelectr('.child_class');
-        container.classList.add('chosed');
+        var currentOption = vm.events()[eventId()].levels()[levelId()].options()[optionsId()],
+            container,
+            childPart = container.querySelector('.child_class');
+        vm.choseAndRemoveClass(container);
         currentOption({
             type: 'changed! Option'
         });
     };
 
     this.choseNewWin = function(eventId, levelId, winId) {
-        var currentWin = vm.events()[eventId()].levels()[levelId()].wins()[winId()];
-        container,
-        childPart = container.querySelectr('.child_class');
-        container.classList.add('chosed');
+        var currentWin = vm.events()[eventId()].levels()[levelId()].wins()[winId()],
+            container,
+            childPart = container.querySelector('.child_class');
+        vm.choseAndRemoveClass(container);
         currentWin({
             type: 'changed! Win'
         });
@@ -221,7 +221,15 @@ function TaskModel() {
 
     this.toggleGreatLevel = function(input, event) {
         var container,
-        childPart = container.querySelectr('.child_class');
+            childPart = container.querySelector('.child_class');
+        vm.choseAndRemoveClass(container);
+    };
+
+    this.choseAndRemoveClass = function(container) {
+        var containers = document.querySelectorAll('.child_container');
+        [].forEach.call(containers, function(item, index) {
+            item.classList.remove('chosed');
+        });
         container.classList.add('chosed');
     };
 
