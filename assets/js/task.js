@@ -2,6 +2,29 @@ function TaskModel() {
     var vm = this;
     this.number = ko.observable(10);
     this.events = ko.observableArray();
+    this.optionsForm = ko.observableArray([{
+        name: ko.observable('賺') ,
+        toggle: function() {
+            console.log("something");
+        },
+        children: ko.observableArray([{
+            name: ko.observable('電子遊戲') ,
+            toggle: function() {
+                console.log(this.name);
+            },
+            children: ko.observableArray([{
+                name: ko.observable('fish') ,
+                toggle: function() {
+                    console.log(this.name);
+                },
+            }, {
+                name: ko.observable('whatever'),
+                toggle: function() {
+                    console.log(this.name);
+                }
+            }])
+        }])
+    }]);
 
     this.createEvent = function(index) {
         vm.events.push({
@@ -76,6 +99,10 @@ function TaskModel() {
         currentWin({
             type: 'changed! Win'
         });
+    };
+
+    this.toggleGreatLevel = function(input, event) {
+        console.log(input, event.target);
     };
 
     this.createEvent();

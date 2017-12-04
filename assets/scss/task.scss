@@ -54,21 +54,38 @@ $attendanceColor: #E37E52;
 
         background-color: white;
 
+        @include border-radius(5px);
+
         $item_height: 40px;
         .class_title {
-            font-size: 24px;
             margin: 15px 0px;
+            display: inline-block;
+
+            width: 100%;
             height: $item_height;
             line-height: $item_height;
+
+            font-size: 24px;
             background-color: #4681FF;
-            @include border-radius(5px);
             cursor: pointer;
+            @include border-radius(5px);
+
             &:last-child {
-                margin-bottom: 0px;
+                margin: 0px;
             }
             &:first-child {
                 margin-top: 0px;
             }
+            .words {
+                width: 100%;
+                float: left;
+            }
+            .input {
+                width: 0%;
+                opacity: 0;
+                float: left;
+            }
+
         }
 
         .win {

@@ -8,9 +8,7 @@
     <!-- <meta name='viewport' content='width=device-width, height=device-height, initial-scale=1.0, user-scalable=no'> -->
     <script type="text/javascript" src='/assets/js/lib.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
-
     <link rel="stylesheet" href="/assets/css/task.css">
-
     <title>Document</title>
 </head>
 <style>
@@ -91,18 +89,20 @@ table {
     <!-- /ko -->
     <div class="full-mask">
         <div class="pop-up-container">
-
-            <div class="great_class win">
-                <div class="class_title">賺</div>
-                <div class="child_class">
-                    <div class="class_title">電子遊戲</div>
-                    <div class="child_class">
-                        <div class="class_title">Fish</div>
-                        <div class="class_title">Whatever</div>
+            <div class="great_class win" data-bind="foreach: optionsForm">
+                <div class="class_title" data-bind="click: toggle">
+                    <div class="words" data-bind="text: name"></div>
+                    <div class="input">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="child_class" data-bind="foreach: children">
+                    <div class="class_title" data-bind="text: name"></div>
+                    <div class="child_class" data-bind="foreach: children">
+                        <div class="class_title" data-bind="text: name"></div>
                     </div>
                 </div>
             </div>
-
 
             <div class="great_class lose">
                 <div class="class_title">賠</div>
@@ -114,8 +114,6 @@ table {
                     </div>
                 </div>
             </div>
-
-
             <div class="great_class bet">
                 <div class="class_title">投注</div>
                 <div class="child_class">
@@ -126,8 +124,6 @@ table {
                     </div>
                 </div>
             </div>
-
-
             <div class="great_class attendance">
                 <div class="class_title">登入</div>
                 <div class="child_class">
@@ -138,7 +134,6 @@ table {
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </body>
