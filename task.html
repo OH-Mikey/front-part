@@ -91,17 +91,22 @@ table {
         <div class="pop-up-container">
             <div class="optionsForm" data-bind="foreach: optionsForm">
                 <div class="" data-bind="attr: { class: 'great_class ' + className } ">
-                    <div class="class_title" data-bind="click: toggle">
-                        <div class="words" data-bind="text: name"></div>
-                        <div class="input ui">
-                            <input type="text" placeholder="請輸入數值">
+                    <div class="child_container">
+                        <div class="class_title" data-bind="click: toggle">
+                            <div class="words" data-bind="text: name"></div>
+                            <div class="input ui">
+                                <input type="text" placeholder="請輸入數值">
+                            </div>
                         </div>
-                    </div>
-                    <div class="child_class" data-bind="foreach: children">
-                        <div class="child_container">
-                            <div class="class_title" data-bind="text: name, click: toggle"></div>
-                            <div class="child_class" data-bind="foreach: children">
+                        <div class="child_class" data-bind="foreach: children">
+                            <div class="child_container">
                                 <div class="class_title" data-bind="text: name, click: toggle"></div>
+                                <div class="child_class" data-bind="foreach: children">
+                                    <div class="child_container">
+                                        <div class="class_title" data-bind="text: name, click: toggle"></div>
+                                        <p>more info</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

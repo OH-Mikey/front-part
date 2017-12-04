@@ -7,50 +7,66 @@ function TaskModel() {
         className: 'win',
         key: ko.observable('win'),
         toggle: function(input, event) {
-            console.log(event.currentTarget.parentNode.querySelector('.child_class'));
+            var container = event.currentTarget.parentNode,
+            childPart = container.querySelectr('.child_class');
+            container.classList.add('chosed');
         },
         children: ko.observableArray([{
             name: ko.observable('電子遊戲'),
             key: ko.observable('win_game'),
             toggle: function(input, event) {
-                console.log(event.currentTarget.parentNode.querySelector('.child_class'));
+                var container = event.currentTarget.parentNode,
+                childPart = container.querySelectr('.child_class');
+                container.classList.add('chosed');
             },
             children: ko.observableArray([{
                 name: ko.observable('fish'),
                 key: ko.observable('win_game_fish'),
                 toggle: function(input, event) {
-                    console.log(event.currentTarget.parentNode.querySelector('.child_class'));
+                    var container = event.currentTarget.parentNode,
+                    childPart = container.querySelectr('.child_class');
+                    container.classList.add('chosed');
                 },
             }, {
                 name: ko.observable('鋼鐵人'),
                 key: ko.observable('win_game_鋼鐵人'),
                 toggle: function(input, event) {
-                    console.log(event.currentTarget.parentNode.querySelector('.child_class'));
+                    var container = event.currentTarget.parentNode,
+                    childPart = container.querySelectr('.child_class');
+                    container.classList.add('chosed');
                 }
             }, {
                 name: ko.observable('其他1'),
                 key: ko.observable('win_game_其他1'),
                 toggle: function(input, event) {
-                    console.log(event.currentTarget.parentNode.querySelector('.child_class'));
+                    var container = event.currentTarget.parentNode,
+                    childPart = container.querySelectr('.child_class');
+                    container.classList.add('chosed');
                 }
             }])
         }, {
             name: ko.observable('彩票系統'),
             key: ko.observable('win_lottery'),
             toggle: function(input, event) {
-                console.log(event.currentTarget.parentNode.querySelector('.child_class'));
+                var container = event.currentTarget.parentNode,
+                childPart = container.querySelectr('.child_class');
+                container.classList.add('chosed');
             },
             children: ko.observableArray([{
                 name: ko.observable('六合彩'),
                 key: ko.observable('win_lottery_六合彩'),
                 toggle: function(input, event) {
-                    console.log(event.currentTarget.parentNode.querySelector('.child_class'));
+                    var container = event.currentTarget.parentNode,
+                    childPart = container.querySelectr('.child_class');
+                    container.classList.add('chosed');
                 },
             }, {
                 name: ko.observable('11選11'),
                 key: ko.observable('win_lottery_11選11'),
                 toggle: function(input, event) {
-                    console.log(event.currentTarget.parentNode.querySelector('.child_class'));
+                    var container = event.currentTarget.parentNode,
+                    childPart = container.querySelectr('.child_class');
+                    container.classList.add('chosed');
                 }
             }])
         }])
@@ -59,50 +75,66 @@ function TaskModel() {
         className: 'lose',
         key: ko.observable('lose'),
         toggle: function(input, event) {
-            console.log(event.currentTarget.parentNode.querySelector('.child_class'));
+            var container = event.currentTarget.parentNode,
+            childPart = container.querySelectr('.child_class');
+            container.classList.add('chosed');
         },
         children: ko.observableArray([{
             name: ko.observable('電子遊戲'),
             key: ko.observable('lose_game'),
             toggle: function(input, event) {
-                console.log(event.currentTarget.parentNode.querySelector('.child_class'));
+                var container = event.currentTarget.parentNode,
+                childPart = container.querySelectr('.child_class');
+                container.classList.add('chosed');
             },
             children: ko.observableArray([{
                 name: ko.observable('fish'),
                 key: ko.observable('lose_game_fish'),
                 toggle: function(input, event) {
-                    console.log(event.currentTarget.parentNode.querySelector('.child_class'));
+                    var container = event.currentTarget.parentNode,
+                    childPart = container.querySelectr('.child_class');
+                    container.classList.add('chosed');
                 },
             }, {
                 name: ko.observable('鋼鐵人'),
                 key: ko.observable('lose_game_鋼鐵人'),
                 toggle: function(input, event) {
-                    console.log(event.currentTarget.parentNode.querySelector('.child_class'));
+                    var container = event.currentTarget.parentNode,
+                    childPart = container.querySelectr('.child_class');
+                    container.classList.add('chosed');
                 }
             }, {
                 name: ko.observable('其他1'),
                 key: ko.observable('lose_game_其他1'),
                 toggle: function(input, event) {
-                    console.log(event.currentTarget.parentNode.querySelector('.child_class'));
+                    var container = event.currentTarget.parentNode,
+                    childPart = container.querySelectr('.child_class');
+                    container.classList.add('chosed');
                 }
             }])
         }, {
             name: ko.observable('彩票系統'),
             key: ko.observable('lose_lottery'),
             toggle: function(input, event) {
-                console.log(event.currentTarget.parentNode.querySelector('.child_class'));
+                var container = event.currentTarget.parentNode,
+                childPart = container.querySelectr('.child_class');
+                container.classList.add('chosed');
             },
             children: ko.observableArray([{
                 name: ko.observable('六合彩'),
                 key: ko.observable('lose_lottery_六合彩'),
                 toggle: function(input, event) {
-                    console.log(event.currentTarget.parentNode.querySelector('.child_class'));
+                    var container = event.currentTarget.parentNode,
+                    childPart = container.querySelectr('.child_class');
+                    container.classList.add('chosed');
                 },
             }, {
                 name: ko.observable('11選11'),
                 key: ko.observable('lose_lottery_11選11'),
                 toggle: function(input, event) {
-                    console.log(event.currentTarget.parentNode.querySelector('.child_class'));
+                    var container = event.currentTarget.parentNode,
+                    childPart = container.querySelectr('.child_class');
+                    container.classList.add('chosed');
                 }
             }])
         }])
@@ -169,7 +201,9 @@ function TaskModel() {
 
     this.choseNewOption = function(eventId, levelId, optionsId) {
         var currentOption = vm.events()[eventId()].levels()[levelId()].options()[optionsId()];
-        console.log(currentOption());
+        container,
+        childPart = container.querySelectr('.child_class');
+        container.classList.add('chosed');
         currentOption({
             type: 'changed! Option'
         });
@@ -177,14 +211,18 @@ function TaskModel() {
 
     this.choseNewWin = function(eventId, levelId, winId) {
         var currentWin = vm.events()[eventId()].levels()[levelId()].wins()[winId()];
-        console.log(currentWin());
+        container,
+        childPart = container.querySelectr('.child_class');
+        container.classList.add('chosed');
         currentWin({
             type: 'changed! Win'
         });
     };
 
     this.toggleGreatLevel = function(input, event) {
-        console.log(input, event.currentTarget);
+        var container,
+        childPart = container.querySelectr('.child_class');
+        container.classList.add('chosed');
     };
 
     this.createEvent();

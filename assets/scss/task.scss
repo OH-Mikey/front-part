@@ -5,6 +5,7 @@
     padding: 0px;
     @include box-sizing(border-box);
 }
+
 $winColor: #fc6aa5;
 $loseColor: #6F83FA;
 $betColor: #72E88A;
@@ -60,6 +61,17 @@ $gapWidth: 5px;
         @include border-radius(5px);
 
         $item_height: 40px;
+
+        .child_container {
+            padding: $gapWidth 0px;
+            margin: 0px 0px $gapWidth 0px;
+            display: inline-block;
+            width: 100%;
+            &.chosed {
+                border: 3px solid #141414;
+            }
+        }
+
         .class_title {
             margin: 0px 0px $gapWidth 0px;
             display: inline-block;
@@ -77,7 +89,7 @@ $gapWidth: 5px;
             @include border-radius(5px);
 
             &:active {
-                @include box-shadow(-5px -5px 20px 0px rgba(120,120,120,0.2) inset);
+                @include box-shadow(-5px -5px 20px 0px rgba(120, 120, 120, 0.2) inset);
             }
 
             &:first-child {
@@ -99,7 +111,6 @@ $gapWidth: 5px;
                 overflow: hidden;
                 text-align: right;
             }
-
         }
 
         .win {
