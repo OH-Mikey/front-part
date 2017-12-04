@@ -89,50 +89,25 @@ table {
     <!-- /ko -->
     <div class="full-mask">
         <div class="pop-up-container">
-            <div class="great_class win" data-bind="foreach: optionsForm">
-                <div class="class_title" data-bind="click: toggle">
-                    <div class="words" data-bind="text: name"></div>
-                    <div class="input">
-                        <input type="text">
+            <div class="optionsForm" data-bind="foreach: optionsForm">
+                <div class="" data-bind="attr: { class: 'great_class ' + className } ">
+                    <div class="class_title" data-bind="click: toggle">
+                        <div class="words" data-bind="text: name"></div>
+                        <div class="input ui">
+                            <input type="text" placeholder="請輸入數值">
+                        </div>
                     </div>
-                </div>
-                <div class="child_class" data-bind="foreach: children">
-                    <div class="class_title" data-bind="text: name"></div>
                     <div class="child_class" data-bind="foreach: children">
-                        <div class="class_title" data-bind="text: name"></div>
+                        <div class="class_title" data-bind="text: name, click: toggle"></div>
+                        <div class="child_class" data-bind="foreach: children">
+                            <div class="class_title" data-bind="text: name, click: toggle"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="great_class lose">
-                <div class="class_title">賠</div>
-                <div class="child_class">
-                    <div class="class_title">電子遊戲</div>
-                    <div class="child_class">
-                        <div class="class_title">Fish</div>
-                        <div class="class_title">Whatever</div>
-                    </div>
-                </div>
-            </div>
-            <div class="great_class bet">
-                <div class="class_title">投注</div>
-                <div class="child_class">
-                    <div class="class_title">電子遊戲</div>
-                    <div class="child_class">
-                        <div class="class_title">Fish</div>
-                        <div class="class_title">Whatever</div>
-                    </div>
-                </div>
-            </div>
-            <div class="great_class attendance">
-                <div class="class_title">登入</div>
-                <div class="child_class">
-                    <div class="class_title">電子遊戲</div>
-                    <div class="child_class">
-                        <div class="class_title">Fish</div>
-                        <div class="class_title">Whatever</div>
-                    </div>
-                </div>
+            <div class="sendBack">
+                <button class="ui button">確定</button>
+                <button class="ui button">取消</button>
             </div>
         </div>
     </div>

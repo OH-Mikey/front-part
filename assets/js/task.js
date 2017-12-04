@@ -3,24 +3,106 @@ function TaskModel() {
     this.number = ko.observable(10);
     this.events = ko.observableArray();
     this.optionsForm = ko.observableArray([{
-        name: ko.observable('賺') ,
+        name: ko.observable('賺'),
+        className: 'win',
+        key: ko.observable('win'),
         toggle: function() {
-            console.log("something");
+            console.log(this.key());
         },
         children: ko.observableArray([{
-            name: ko.observable('電子遊戲') ,
+            name: ko.observable('電子遊戲'),
+            key: ko.observable('win_game'),
             toggle: function() {
-                console.log(this.name);
+                console.log(this.key());
             },
             children: ko.observableArray([{
-                name: ko.observable('fish') ,
+                name: ko.observable('fish'),
+                key: ko.observable('win_game_fish'),
                 toggle: function() {
-                    console.log(this.name);
+                    console.log(this.key());
                 },
             }, {
-                name: ko.observable('whatever'),
+                name: ko.observable('鋼鐵人'),
+                key: ko.observable('win_game_鋼鐵人'),
                 toggle: function() {
-                    console.log(this.name);
+                    console.log(this.key());
+                }
+            }, {
+                name: ko.observable('其他1'),
+                key: ko.observable('win_game_其他1'),
+                toggle: function() {
+                    console.log(this.key());
+                }
+            }])
+        }, {
+            name: ko.observable('彩票系統'),
+            key: ko.observable('win_lottery'),
+            toggle: function() {
+                console.log(this.key());
+            },
+            children: ko.observableArray([{
+                name: ko.observable('六合彩'),
+                key: ko.observable('win_lottery_六合彩'),
+                toggle: function() {
+                    console.log(this.key());
+                },
+            }, {
+                name: ko.observable('11選11'),
+                key: ko.observable('win_lottery_11選11'),
+                toggle: function() {
+                    console.log(this.key());
+                }
+            }])
+        }])
+    }, {
+        name: ko.observable('賠'),
+        className: 'lose',
+        key: ko.observable('lose'),
+        toggle: function() {
+            console.log(this.key());
+        },
+        children: ko.observableArray([{
+            name: ko.observable('電子遊戲'),
+            key: ko.observable('lose_game'),
+            toggle: function() {
+                console.log(this.key());
+            },
+            children: ko.observableArray([{
+                name: ko.observable('fish'),
+                key: ko.observable('lose_game_fish'),
+                toggle: function() {
+                    console.log(this.key());
+                },
+            }, {
+                name: ko.observable('鋼鐵人'),
+                key: ko.observable('lose_game_鋼鐵人'),
+                toggle: function() {
+                    console.log(this.key());
+                }
+            }, {
+                name: ko.observable('其他1'),
+                key: ko.observable('lose_game_其他1'),
+                toggle: function() {
+                    console.log(this.key());
+                }
+            }])
+        }, {
+            name: ko.observable('彩票系統'),
+            key: ko.observable('lose_lottery'),
+            toggle: function() {
+                console.log(this.key());
+            },
+            children: ko.observableArray([{
+                name: ko.observable('六合彩'),
+                key: ko.observable('lose_lottery_六合彩'),
+                toggle: function() {
+                    console.log(this.key());
+                },
+            }, {
+                name: ko.observable('11選11'),
+                key: ko.observable('lose_lottery_11選11'),
+                toggle: function() {
+                    console.log(this.key());
                 }
             }])
         }])

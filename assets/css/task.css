@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 
-/* line 36, ../scss/task.scss */
+/* line 39, ../scss/task.scss */
 .full-mask {
   position: fixed;
   top: 0px;
@@ -17,10 +17,10 @@
   background-color: rgba(0, 0, 0, 0.8);
   text-align: center;
 }
-/* line 45, ../scss/task.scss */
+/* line 48, ../scss/task.scss */
 .full-mask .pop-up-container {
   position: relative;
-  padding: 15px;
+  padding: 5px;
   width: 80%;
   max-height: 90%;
   overflow: auto;
@@ -31,113 +31,120 @@
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 60, ../scss/task.scss */
+/* line 63, ../scss/task.scss */
 .full-mask .pop-up-container .class_title {
-  margin: 15px 0px;
+  margin: 0px 0px 5px 0px;
   display: inline-block;
+  float: left;
   width: 100%;
   height: 40px;
   line-height: 40px;
   font-size: 24px;
   background-color: #4681FF;
   cursor: pointer;
+  position: relative;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 73, ../scss/task.scss */
-.full-mask .pop-up-container .class_title:last-child {
-  margin: 0px;
-}
-/* line 76, ../scss/task.scss */
+/* line 79, ../scss/task.scss */
 .full-mask .pop-up-container .class_title:first-child {
   margin-top: 0px;
 }
-/* line 79, ../scss/task.scss */
+/* line 82, ../scss/task.scss */
 .full-mask .pop-up-container .class_title .words {
   width: 100%;
   float: left;
 }
-/* line 83, ../scss/task.scss */
+/* line 86, ../scss/task.scss */
 .full-mask .pop-up-container .class_title .input {
-  width: 0%;
-  opacity: 0;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 50%;
+  padding-right: 5px;
+  font-size: 50%;
+  display: inline-block;
   float: left;
+  overflow: hidden;
+  text-align: right;
 }
-/* line 92, ../scss/task.scss */
+/* line 102, ../scss/task.scss */
 .full-mask .pop-up-container .win .class_title {
   background-color: #fc6aa5;
 }
-/* line 15, ../scss/task.scss */
+/* line 18, ../scss/task.scss */
 .full-mask .pop-up-container .win .child_class .class_title {
   background-color: #fd92bd;
 }
-/* line 21, ../scss/task.scss */
+/* line 24, ../scss/task.scss */
 .full-mask .pop-up-container .win .child_class .child_class .class_title {
   background-color: #febad5;
 }
-/* line 28, ../scss/task.scss */
+/* line 31, ../scss/task.scss */
 .full-mask .pop-up-container .win .child_class .child_class .child_class .class_title {
   background-color: #fee2ed;
 }
-/* line 99, ../scss/task.scss */
+/* line 109, ../scss/task.scss */
 .full-mask .pop-up-container .lose .class_title {
   background-color: #6F83FA;
 }
-/* line 15, ../scss/task.scss */
+/* line 18, ../scss/task.scss */
 .full-mask .pop-up-container .lose .child_class .class_title {
   background-color: #96a5fb;
 }
-/* line 21, ../scss/task.scss */
+/* line 24, ../scss/task.scss */
 .full-mask .pop-up-container .lose .child_class .child_class .class_title {
   background-color: #bec7fd;
 }
-/* line 28, ../scss/task.scss */
+/* line 31, ../scss/task.scss */
 .full-mask .pop-up-container .lose .child_class .child_class .child_class .class_title {
   background-color: #e5e9fe;
 }
-/* line 106, ../scss/task.scss */
+/* line 116, ../scss/task.scss */
 .full-mask .pop-up-container .bet .class_title {
   background-color: #72E88A;
 }
-/* line 15, ../scss/task.scss */
+/* line 18, ../scss/task.scss */
 .full-mask .pop-up-container .bet .child_class .class_title {
   background-color: #95eea7;
 }
-/* line 21, ../scss/task.scss */
+/* line 24, ../scss/task.scss */
 .full-mask .pop-up-container .bet .child_class .child_class .class_title {
   background-color: #b8f3c4;
 }
-/* line 28, ../scss/task.scss */
+/* line 31, ../scss/task.scss */
 .full-mask .pop-up-container .bet .child_class .child_class .child_class .class_title {
   background-color: #dbf9e1;
 }
-/* line 113, ../scss/task.scss */
+/* line 123, ../scss/task.scss */
 .full-mask .pop-up-container .attendance .class_title {
   background-color: #E37E52;
 }
-/* line 15, ../scss/task.scss */
+/* line 18, ../scss/task.scss */
 .full-mask .pop-up-container .attendance .child_class .class_title {
   background-color: #e99875;
 }
-/* line 21, ../scss/task.scss */
+/* line 24, ../scss/task.scss */
 .full-mask .pop-up-container .attendance .child_class .child_class .class_title {
   background-color: #eeb298;
 }
-/* line 28, ../scss/task.scss */
+/* line 31, ../scss/task.scss */
 .full-mask .pop-up-container .attendance .child_class .child_class .child_class .class_title {
   background-color: #f4cdbb;
 }
-/* line 119, ../scss/task.scss */
+/* line 129, ../scss/task.scss */
 .full-mask .pop-up-container .great_class {
+  float: left;
   width: 100%;
-  margin: 15px 0px;
+  margin: 5px 0px;
 }
-/* line 124, ../scss/task.scss */
+/* line 135, ../scss/task.scss */
 .full-mask .pop-up-container .child_class {
   width: 80%;
+  float: left;
 }
-/* line 129, ../scss/task.scss */
+/* line 141, ../scss/task.scss */
 .full-mask:after {
   content: "";
   display: inline-block;
