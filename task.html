@@ -98,9 +98,11 @@ table {
                         </div>
                     </div>
                     <div class="child_class" data-bind="foreach: children">
-                        <div class="class_title" data-bind="text: name, click: toggle"></div>
-                        <div class="child_class" data-bind="foreach: children">
+                        <div class="child_container">
                             <div class="class_title" data-bind="text: name, click: toggle"></div>
+                            <div class="child_class" data-bind="foreach: children">
+                                <div class="class_title" data-bind="text: name, click: toggle"></div>
+                            </div>
                         </div>
                     </div>
                 </div>

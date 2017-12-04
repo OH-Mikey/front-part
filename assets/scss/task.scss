@@ -76,6 +76,10 @@ $gapWidth: 5px;
             position: relative;
             @include border-radius(5px);
 
+            &:active {
+                @include box-shadow(-5px -5px 20px 0px rgba(120,120,120,0.2) inset);
+            }
+
             &:first-child {
                 margin-top: 0px;
             }
