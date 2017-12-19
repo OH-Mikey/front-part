@@ -17,14 +17,14 @@
   background-color: rgba(0, 0, 0, 0.8);
   text-align: center;
 }
-/* line 49, ../scss/task.scss */
+/* line 50, ../scss/task.scss */
 .full-mask .optionsForm {
   width: 100%;
   height: 50vh;
   display: inline-block;
   overflow: auto;
 }
-/* line 56, ../scss/task.scss */
+/* line 57, ../scss/task.scss */
 .full-mask .pop-up-container {
   position: relative;
   padding: 5px;
@@ -38,18 +38,18 @@
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 72, ../scss/task.scss */
+/* line 73, ../scss/task.scss */
 .full-mask .pop-up-container .child_container {
   padding: 5px 0px;
   margin: 0px 0px 5px 0px;
   display: inline-block;
   width: 100%;
 }
-/* line 77, ../scss/task.scss */
+/* line 78, ../scss/task.scss */
 .full-mask .pop-up-container .child_container.chosed {
   border: 3px solid #141414;
 }
-/* line 82, ../scss/task.scss */
+/* line 83, ../scss/task.scss */
 .full-mask .pop-up-container .class_title {
   margin: 0px 0px 5px 0px;
   display: inline-block;
@@ -65,22 +65,22 @@
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 98, ../scss/task.scss */
+/* line 99, ../scss/task.scss */
 .full-mask .pop-up-container .class_title:active {
   -moz-box-shadow: -5px -5px 20px 0px rgba(120, 120, 120, 0.2) inset;
   -webkit-box-shadow: -5px -5px 20px 0px rgba(120, 120, 120, 0.2) inset;
   box-shadow: -5px -5px 20px 0px rgba(120, 120, 120, 0.2) inset;
 }
-/* line 102, ../scss/task.scss */
+/* line 103, ../scss/task.scss */
 .full-mask .pop-up-container .class_title:first-child {
   margin-top: 0px;
 }
-/* line 105, ../scss/task.scss */
+/* line 106, ../scss/task.scss */
 .full-mask .pop-up-container .class_title .words {
   width: 100%;
   float: left;
 }
-/* line 109, ../scss/task.scss */
+/* line 110, ../scss/task.scss */
 .full-mask .pop-up-container .class_title .input {
   position: absolute;
   top: 0px;
@@ -93,7 +93,7 @@
   overflow: hidden;
   text-align: right;
 }
-/* line 124, ../scss/task.scss */
+/* line 125, ../scss/task.scss */
 .full-mask .pop-up-container .win .class_title {
   background-color: #fc6aa5;
 }
@@ -109,7 +109,7 @@
 .full-mask .pop-up-container .win .child_class .child_class .child_class .class_title {
   background-color: #fee2ed;
 }
-/* line 131, ../scss/task.scss */
+/* line 132, ../scss/task.scss */
 .full-mask .pop-up-container .lose .class_title {
   background-color: #6F83FA;
 }
@@ -125,7 +125,7 @@
 .full-mask .pop-up-container .lose .child_class .child_class .child_class .class_title {
   background-color: #e5e9fe;
 }
-/* line 138, ../scss/task.scss */
+/* line 139, ../scss/task.scss */
 .full-mask .pop-up-container .bet .class_title {
   background-color: #72E88A;
 }
@@ -141,7 +141,7 @@
 .full-mask .pop-up-container .bet .child_class .child_class .child_class .class_title {
   background-color: #dbf9e1;
 }
-/* line 145, ../scss/task.scss */
+/* line 146, ../scss/task.scss */
 .full-mask .pop-up-container .attendance .class_title {
   background-color: #E37E52;
 }
@@ -157,18 +157,18 @@
 .full-mask .pop-up-container .attendance .child_class .child_class .child_class .class_title {
   background-color: #f4cdbb;
 }
-/* line 151, ../scss/task.scss */
+/* line 152, ../scss/task.scss */
 .full-mask .pop-up-container .great_class {
   float: left;
   width: 100%;
   margin: 5px 0px;
 }
-/* line 157, ../scss/task.scss */
+/* line 158, ../scss/task.scss */
 .full-mask .pop-up-container .child_class {
   width: 80%;
   float: left;
 }
-/* line 163, ../scss/task.scss */
+/* line 164, ../scss/task.scss */
 .full-mask:after {
   content: "";
   display: inline-block;

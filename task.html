@@ -87,7 +87,7 @@ table {
         <tfoot></tfoot>
     </table>
     <!-- /ko -->
-    <div class="full-mask">
+    <div class="full-mask" data-bind="visible: fullMaskShow">
         <div class="pop-up-container">
             <div class="optionsForm" data-bind="foreach: optionsForm">
                 <div class="" data-bind="attr: { class: 'great_class ' + className } ">
@@ -113,8 +113,8 @@ table {
                 </div>
             </div>
             <div class="sendBack">
-                <button class="ui button">確定</button>
-                <button class="ui button">取消</button>
+                <button class="ui button" data-bind="click: function() { choseOption(); } ">確定</button>
+                <button class="ui button" data-bind="click: function() { cancelChoseOption(); } ">取消</button>
             </div>
         </div>
     </div>

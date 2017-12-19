@@ -140,6 +140,13 @@ function TaskModel() {
         }])
     }]);
 
+    this.fullMaskShow = ko.observable(false);
+
+    this.currentEventId = ko.observable();
+    this.currentLevelId = ko.observable();
+    this.currentOptionId = ko.observable();
+    this.currentWinId = ko.observable();
+
     this.createEvent = function(index) {
         vm.events.push({
             theadOptions: ko.observableArray([1]),
@@ -200,13 +207,11 @@ function TaskModel() {
     };
 
     this.choseNewOption = function(eventId, levelId, optionsId) {
-        var currentOption = vm.events()[eventId()].levels()[levelId()].options()[optionsId()],
-            container,
-            childPart = container.querySelector('.child_class');
-        vm.choseAndRemoveClass(container);
-        currentOption({
-            type: 'changed! Option'
-        });
+        vm.currentEventId(eventId());
+        vm.currentLevelId(levelId());
+        vm.currentOptionId(optionsId());
+
+        vm.fullMaskShow(true);
     };
 
     this.choseNewWin = function(eventId, levelId, winId) {
@@ -231,6 +236,30 @@ function TaskModel() {
             item.classList.remove('chosed');
         });
         container.classList.add('chosed');
+    };
+
+    this.choseOption = function() {
+        var eventId = vm.currentEventId(),
+            levelId = vm.currentEventId(),
+            optionId = vm.currentOptionId();
+        var currentOption = vm.events()[eventId].levels()[levelId].options()[optionId];
+        currentOption({
+            type: 'another chose part'
+        });
+        vm.fullMaskShow(false);
+
+        vm.resetCurrentIDs();
+    };
+
+    this.cancelChoseOption = function() {
+        this.fullMaskShow(false);
+    };
+
+    this.resetCurrentIDs = function() {
+        this.currentEventId(null);
+        this.currentLevelId(null);
+        this.currentOptionId(null);
+        this.currentWinId(null);
     };
 
     this.createEvent();
