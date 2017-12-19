@@ -30,9 +30,11 @@ table {
                     </div>
                 </td>
                 <!-- /ko -->
-                <td data-bind="attr: { rowspan: levels().length + 1 } " rowspan="3">
+
+                <td data-bind="attr: { rowspan: levels().length + 1 }">
                     <button class="ui button" data-bind="click: function() { $root.createOption($index) } ">新增條件</button>
                 </td>
+
                 <!-- ko foreach: theadWins -->
                 <td>
                     <div class="ui input">
@@ -40,10 +42,12 @@ table {
                     </div>
                 </td>
                 <!-- /ko -->
-                <td data-bind="attr: { rowspan: levels().length + 1 } " rowspan="3">
+
+                <td data-bind="attr: { rowspan: levels().length + 1 }">
                     <button class="ui button" data-bind="click: function() { $root.createWin($index) }">新增獎勵</button>
                 </td>
             </tr>
+
             <!-- ko foreach: levels -->
             <tr>
                 <!-- ko foreach: options -->
@@ -63,6 +67,7 @@ table {
                     </div>
                 </td>
                 <!-- /ko -->
+
                 <!-- ko foreach: wins -->
                 <td>
                     <div class="ui input">
@@ -78,8 +83,10 @@ table {
                     </div>
                 </td>
                 <!-- /ko -->
+
             </tr>
             <!-- /ko -->
+
             <tr>
                 <td>
                     <button class="ui button" data-bind="click: function() { $root.createLevel($index) } ">新增級別</button>

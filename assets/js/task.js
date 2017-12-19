@@ -378,25 +378,27 @@ function TaskModel() {
     this.createLevel = function(index) {
         var currentObj = vm.events()[index()],
             tempWinArray = [],
-            tempOptionArray = [];
+            tempOptionArray = [],
+            currentIndex = 0;
+
+        currentObj.levels.push({
+            options: ko.observableArray(),
+            wins: ko.observableArray()
+        });
+        currentIndex = currentObj.levels().length - 1;
 
         for (var i = 0; i < currentObj.theadOptions().length; i++) {
-            tempOptionArray.push(ko.observable({
+            currentObj.levels()[currentIndex].options.push(ko.observable({
                 number: ko.observable(),
                 type: '?'
             }));
         }
         for (i = 0; i < currentObj.theadWins().length; i++) {
-            tempOptionArray.push(ko.observable({
+            currentObj.levels()[currentIndex].wins.push(ko.observable({
                 number: ko.observable(),
-                type: '?'
+                type: 'win?'
             }));
         }
-
-        currentObj.levels.push({
-            options: ko.observableArray(tempOptionArray),
-            wins: ko.observableArray(tempWinArray)
-        });
     };
 
     this.createOption = function(index) {
@@ -417,7 +419,7 @@ function TaskModel() {
         for (var i = 0; i < currentObj.levels().length; i++) {
             currentObj.levels()[i].wins.push(ko.observable({
                 number: ko.observable(),
-                type: '?',
+                type: 'win?',
                 value: 123
             }));
         }
@@ -476,7 +478,7 @@ function TaskModel() {
         this.fullMaskShow(false);
     };
 
-    this.resetCurrentIDsAndSelected  = function() {
+    this.resetCurrentIDsAndSelected = function() {
         return;
         this.currentEventId(null);
         this.currentLevelId(null);
