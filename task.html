@@ -95,15 +95,25 @@ table {
                         <div class="class_title" data-bind="click: toggle">
                             <div class="words" data-bind="text: name"></div>
                             <div class="input ui">
-                                <input type="text" placeholder="請輸入數值">
+                                <input type="text" placeholder="請輸入數值" data-bind="value: numberValue, valueUpdate: 'keyup', event: { 'keyup': updateValue }">
                             </div>
                         </div>
                         <div class="child_class" data-bind="foreach: children">
                             <div class="child_container">
-                                <div class="class_title" data-bind="text: name, click: toggle"></div>
+                                <div class="class_title" data-bind="click: toggle">
+                                    <div class="words" data-bind="text: name"></div>
+                                    <div class="input ui">
+                                        <input type="text" placeholder="請輸入數值" data-bind="value: numberValue, valueUpdate: 'keyup', event: { 'keyup': updateValue }">
+                                    </div>
+                                </div>
                                 <div class="child_class" data-bind="foreach: children">
                                     <div class="child_container">
-                                        <div class="class_title" data-bind="text: name, click: toggle"></div>
+                                        <div class="class_title" data-bind="click: toggle">
+                                            <div class="words" data-bind="text: name"></div>
+                                            <div class="input ui">
+                                                <input type="text" placeholder="請輸入數值" data-bind="value: numberValue, valueUpdate: 'keyup', event: { 'keyup': updateValue }">
+                                            </div>
+                                        </div>
                                         <p>more info</p>
                                     </div>
                                 </div>
