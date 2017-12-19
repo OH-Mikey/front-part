@@ -1,6 +1,5 @@
 function TaskModel() {
     vm = this;
-    this.number = ko.observable(10);
     this.events = ko.observableArray();
     this.optionsForm = ko.observableArray([{
         name: ko.observable('賺'),
@@ -474,14 +473,12 @@ function TaskModel() {
 
         vm.fullMaskShow(false);
         vm.optionsFormShow(false);
-        vm.resetCurrentIDsAndSelected();
     };
 
     this.choseWin = function() {
         console.log('chose win');
         vm.fullMaskShow(false);
-        vm.optionsFormShow(false);
-        vm.resetCurrentIDsAndSelected();
+        vm.winsFormShow(false);
     };
 
     this.cancelChoseWin = function() {
@@ -495,7 +492,6 @@ function TaskModel() {
     };
 
     this.resetCurrentIDsAndSelected = function() {
-        return;
         this.currentEventId(null);
         this.currentLevelId(null);
         this.currentOptionId(null);
@@ -503,6 +499,12 @@ function TaskModel() {
 
         this.currentSelectOption(null);
         this.currentSelectWin(null);
+    };
+
+    this.sendToBackend = function() {
+        var form = ko.toJS(vm);
+        form = JSON.parse(JSON.stringify(form));
+        console.log(form.events);
     };
 
     this.createEvent();
