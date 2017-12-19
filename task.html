@@ -8,42 +8,7 @@
     <!-- <meta name='viewport' content='width=device-width, height=device-height, initial-scale=1.0, user-scalable=no'> -->
     <script type="text/javascript" src='/assets/js/lib.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
-
-    <script>
-        function handle404Error(el, failed) {
-            if (failed || (el.sheet.cssRules && !el.sheet.cssRules.length)) {
-                var newLink = document.createElement('link');
-                newLink.setAttribute('rel','stylesheet');
-                newLink.setAttribute('href','/assets/css/task.css');
-                document.querySelector('head').appendChild(newLink);
-            } else {
-                console.log(el);
-                console.log('Success!');
-            }
-        }
-        function handleJSOnerror(el, failed, secondTime) {
-            console.count('counter');
-            console.log(el);
-            if (secondTime) {
-                console.log('notice user something');
-                return;
-            }
-
-            if (failed) {
-                var newJS = document.createElement('script');
-                newJS.setAttribute('type', 'text/javascript');
-
-                // newJS.setAttribute('src', '/assets/js/taska.js');
-                newJS.setAttribute('src', '/assets/js/task.js');
-
-                newJS.setAttribute('onerror', 'handleJSOnerror(this, true, true)');
-                document.querySelector('head').appendChild(newJS);
-            }
-        }
-    </script>
-
-    <!-- <link rel="stylesheet" href="/assets/css/task.css" onload="handle404Error(this)" onerror="handle404Error(this, true)"> -->
-    <link rel="stylesheet" href="/nowhere/nothing.css" onload="handle404Error(this)" onerror="handle404Error(this, true)">
+    <link rel="stylesheet" href="/assets/css/task.css">
     <title>Document</title>
 </head>
 <style>
@@ -154,6 +119,6 @@ table {
         </div>
     </div>
 </body>
-<script type="text/javascript" src="/assets/js/nothing.js" onerror="handleJSOnerror(this, true)"></script>
+<script type="text/javascript" src='/assets/js/task.js'></script>
 
 </html>
