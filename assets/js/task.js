@@ -349,6 +349,8 @@ function TaskModel() {
     }]);
 
     this.fullMaskShow = ko.observable(false);
+    this.optionsFormShow = ko.observable(false);
+    this.winsFormShow = ko.observable(false);
 
     this.currentEventId = ko.observable();
     this.currentLevelId = ko.observable();
@@ -369,7 +371,7 @@ function TaskModel() {
                 })]),
                 wins: ko.observableArray([ko.observable({
                     number: ko.observable(),
-                    type: '?'
+                    type: 'win?'
                 })])
             }])
         });
@@ -431,16 +433,16 @@ function TaskModel() {
         vm.currentOptionId(optionsId());
 
         vm.fullMaskShow(true);
+        vm.optionsFormShow(true);
     };
 
     this.choseNewWin = function(eventId, levelId, winId) {
-        var currentWin = vm.events()[eventId()].levels()[levelId()].wins()[winId()],
-            container,
-            childPart = container.querySelector('.child_class');
-        vm.choseAndRemoveClass(container);
-        currentWin({
-            type: 'changed! Win'
-        });
+        vm.currentEventId(eventId());
+        vm.currentLevelId(levelId());
+        vm.currentWinId(winId());
+
+        vm.fullMaskShow(true);
+        vm.winsFormShow(true);
     };
 
     this.toggleGreatLevel = function(input, event) {
@@ -471,11 +473,25 @@ function TaskModel() {
         currentOption(vm.currentSelectOption());
 
         vm.fullMaskShow(false);
+        vm.optionsFormShow(false);
         vm.resetCurrentIDsAndSelected();
     };
 
+    this.choseWin = function() {
+        console.log('chose win');
+        vm.fullMaskShow(false);
+        vm.optionsFormShow(false);
+        vm.resetCurrentIDsAndSelected();
+    };
+
+    this.cancelChoseWin = function() {
+        vm.fullMaskShow(false);
+        vm.winsFormShow(false);
+    };
+
     this.cancelChoseOption = function() {
-        this.fullMaskShow(false);
+        vm.fullMaskShow(false);
+        vm.optionsFormShow(false);
     };
 
     this.resetCurrentIDsAndSelected = function() {

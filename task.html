@@ -98,42 +98,51 @@ table {
     <!-- /ko -->
     <div class="full-mask" data-bind="visible: fullMaskShow">
         <div class="pop-up-container">
-            <div class="optionsForm" data-bind="foreach: optionsForm">
-                <div class="" data-bind="attr: { class: 'great_class ' + key() } ">
-                    <div class="child_container">
-                        <div class="class_title" data-bind="click: toggle">
-                            <div class="words" data-bind="text: name"></div>
-                            <div class="input ui">
-                                <input type="text" placeholder="請輸入數值" data-bind="value: numberValue, valueUpdate: 'keyup', event: { 'keyup': updateValue }">
-                            </div>
-                        </div>
-                        <div class="child_class" data-bind="foreach: children">
-                            <div class="child_container">
-                                <div class="class_title" data-bind="click: toggle">
-                                    <div class="words" data-bind="text: name"></div>
-                                    <div class="input ui">
-                                        <input type="text" placeholder="請輸入數值" data-bind="value: numberValue, valueUpdate: 'keyup', event: { 'keyup': updateValue }">
-                                    </div>
+            <div class="optionContainer" data-bind="visible: optionsFormShow">
+                <div class="optionsForm" data-bind="foreach: optionsForm">
+                    <div class="" data-bind="attr: { class: 'great_class ' + key() } ">
+                        <div class="child_container">
+                            <div class="class_title" data-bind="click: toggle">
+                                <div class="words" data-bind="text: name"></div>
+                                <div class="input ui">
+                                    <input type="text" placeholder="請輸入數值" data-bind="value: numberValue, valueUpdate: 'keyup', event: { 'keyup': updateValue }">
                                 </div>
-                                <div class="child_class" data-bind="foreach: children">
-                                    <div class="child_container">
-                                        <div class="class_title" data-bind="click: toggle">
-                                            <div class="words" data-bind="text: name"></div>
-                                            <div class="input ui">
-                                                <input type="text" placeholder="請輸入數值" data-bind="value: numberValue, valueUpdate: 'keyup', event: { 'keyup': updateValue }">
-                                            </div>
+                            </div>
+                            <div class="child_class" data-bind="foreach: children">
+                                <div class="child_container">
+                                    <div class="class_title" data-bind="click: toggle">
+                                        <div class="words" data-bind="text: name"></div>
+                                        <div class="input ui">
+                                            <input type="text" placeholder="請輸入數值" data-bind="value: numberValue, valueUpdate: 'keyup', event: { 'keyup': updateValue }">
                                         </div>
-                                        <p>more info</p>
+                                    </div>
+                                    <div class="child_class" data-bind="foreach: children">
+                                        <div class="child_container">
+                                            <div class="class_title" data-bind="click: toggle">
+                                                <div class="words" data-bind="text: name"></div>
+                                                <div class="input ui">
+                                                    <input type="text" placeholder="請輸入數值" data-bind="value: numberValue, valueUpdate: 'keyup', event: { 'keyup': updateValue }">
+                                                </div>
+                                            </div>
+                                            <p>more info</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="sendBack">
+                    <button class="ui button" data-bind="click: function() { choseOption(); } ">確定</button>
+                    <button class="ui button" data-bind="click: function() { cancelChoseOption(); } ">取消</button>
+                </div>
             </div>
-            <div class="sendBack">
-                <button class="ui button" data-bind="click: function() { choseOption(); } ">確定</button>
-                <button class="ui button" data-bind="click: function() { cancelChoseOption(); } ">取消</button>
+            <div class="winContainer" data-bind="visible: winsFormShow">
+                <div class="winsForm"></div>
+                <div class="sendBack">
+                    <button class="ui button" data-bind="click: function() { choseWin(); } ">確定</button>
+                    <button class="ui button" data-bind="click: function() { cancelChoseWin(); } ">取消</button>
+                </div>
             </div>
         </div>
     </div>
