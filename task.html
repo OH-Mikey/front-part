@@ -109,7 +109,7 @@ table {
                                     <input type="text" placeholder="請輸入數值" data-bind="value: numberValue, valueUpdate: 'keyup', event: { 'keyup': updateValue }">
                                 </div>
                             </div>
-                            <div class="child_class" data-bind="foreach: children">
+                            <div class="child_class" data-bind="foreach: children, visible: childrenShow">
                                 <div class="child_container">
                                     <div class="class_title" data-bind="click: toggle">
                                         <div class="words" data-bind="text: name"></div>
@@ -117,7 +117,7 @@ table {
                                             <input type="text" placeholder="請輸入數值" data-bind="value: numberValue, valueUpdate: 'keyup', event: { 'keyup': updateValue }">
                                         </div>
                                     </div>
-                                    <div class="child_class" data-bind="foreach: children">
+                                    <div class="child_class" data-bind="foreach: children, visible: childrenShow">
                                         <div class="child_container">
                                             <div class="class_title" data-bind="click: toggle">
                                                 <div class="words" data-bind="text: name"></div>

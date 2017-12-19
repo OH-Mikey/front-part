@@ -77,6 +77,12 @@ $gapWidth: 5px;
             width: 100%;
             &.chosed {
                 border: 3px solid #141414;
+
+                & > .class_title .input {
+                    opacity: 1;
+                    pointer-events: auto;
+                }
+
             }
         }
 
@@ -118,6 +124,9 @@ $gapWidth: 5px;
                 float: left;
                 overflow: hidden;
                 text-align: right;
+
+                opacity: 0;
+                pointer-events: none;
             }
         }
 

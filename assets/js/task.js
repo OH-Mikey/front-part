@@ -5,6 +5,7 @@ function TaskModel() {
         name: ko.observable('賺'),
         className: 'win',
         key: ko.observable('win'),
+        childrenShow: ko.observable(false),
         numberValue: ko.observable(0),
         updateValue: function(input, event) {
             vm.currentSelectOption({
@@ -14,6 +15,7 @@ function TaskModel() {
             });
         },
         toggle: function(input, event) {
+            this.childrenShow(true);
             var container = event.currentTarget.parentNode,
                 childPart = container.querySelector('.child_class');
             vm.choseAndRemoveClass(container);
@@ -26,6 +28,7 @@ function TaskModel() {
         children: ko.observableArray([{
             name: ko.observable('電子遊戲'),
             key: ko.observable('win_game'),
+            childrenShow: ko.observable(false),
             numberValue: ko.observable(0),
             updateValue: function(input, event) {
                 vm.currentSelectOption({
@@ -35,6 +38,7 @@ function TaskModel() {
                 });
             },
             toggle: function(input, event) {
+                this.childrenShow(true);
                 var container = event.currentTarget.parentNode,
                     childPart = container.querySelector('.child_class');
                 vm.choseAndRemoveClass(container);
@@ -47,6 +51,7 @@ function TaskModel() {
             children: ko.observableArray([{
                 name: ko.observable('fish'),
                 key: ko.observable('win_game_fish'),
+                childrenShow: ko.observable(false),
                 numberValue: ko.observable(0),
                 updateValue: function(input, event) {
                     vm.currentSelectOption({
@@ -56,6 +61,7 @@ function TaskModel() {
                     });
                 },
                 toggle: function(input, event) {
+                    this.childrenShow(true);
                     var container = event.currentTarget.parentNode,
                         childPart = container.querySelector('.child_class');
                     vm.choseAndRemoveClass(container);
@@ -68,6 +74,7 @@ function TaskModel() {
             }, {
                 name: ko.observable('鋼鐵人'),
                 key: ko.observable('win_game_鋼鐵人'),
+                childrenShow: ko.observable(false),
                 numberValue: ko.observable(0),
                 updateValue: function(input, event) {
                     vm.currentSelectOption({
@@ -77,6 +84,7 @@ function TaskModel() {
                     });
                 },
                 toggle: function(input, event) {
+                    this.childrenShow(true);
                     var container = event.currentTarget.parentNode,
                         childPart = container.querySelector('.child_class');
                     vm.choseAndRemoveClass(container);
@@ -89,6 +97,7 @@ function TaskModel() {
             }, {
                 name: ko.observable('其他1'),
                 key: ko.observable('win_game_其他1'),
+                childrenShow: ko.observable(false),
                 numberValue: ko.observable(0),
                 updateValue: function(input, event) {
                     vm.currentSelectOption({
@@ -98,6 +107,7 @@ function TaskModel() {
                     });
                 },
                 toggle: function(input, event) {
+                    this.childrenShow(true);
                     var container = event.currentTarget.parentNode,
                         childPart = container.querySelector('.child_class');
                     vm.choseAndRemoveClass(container);
@@ -111,6 +121,7 @@ function TaskModel() {
         }, {
             name: ko.observable('彩票系統'),
             key: ko.observable('win_lottery'),
+            childrenShow: ko.observable(false),
             numberValue: ko.observable(0),
             updateValue: function(input, event) {
                 vm.currentSelectOption({
@@ -120,6 +131,7 @@ function TaskModel() {
                 });
             },
             toggle: function(input, event) {
+                this.childrenShow(true);
                 var container = event.currentTarget.parentNode,
                     childPart = container.querySelector('.child_class');
                 vm.choseAndRemoveClass(container);
@@ -132,6 +144,7 @@ function TaskModel() {
             children: ko.observableArray([{
                 name: ko.observable('六合彩'),
                 key: ko.observable('win_lottery_六合彩'),
+                childrenShow: ko.observable(false),
                 numberValue: ko.observable(0),
                 updateValue: function(input, event) {
                     vm.currentSelectOption({
@@ -141,6 +154,7 @@ function TaskModel() {
                     });
                 },
                 toggle: function(input, event) {
+                    this.childrenShow(true);
                     var container = event.currentTarget.parentNode,
                         childPart = container.querySelector('.child_class');
                     vm.choseAndRemoveClass(container);
@@ -153,6 +167,7 @@ function TaskModel() {
             }, {
                 name: ko.observable('11選11'),
                 key: ko.observable('win_lottery_11選11'),
+                childrenShow: ko.observable(false),
                 numberValue: ko.observable(0),
                 updateValue: function(input, event) {
                     vm.currentSelectOption({
@@ -162,6 +177,7 @@ function TaskModel() {
                     });
                 },
                 toggle: function(input, event) {
+                    this.childrenShow(true);
                     var container = event.currentTarget.parentNode,
                         childPart = container.querySelector('.child_class');
                     vm.choseAndRemoveClass(container);
@@ -177,6 +193,7 @@ function TaskModel() {
         name: ko.observable('賠'),
         className: 'lose',
         key: ko.observable('lose'),
+        childrenShow: ko.observable(false),
         numberValue: ko.observable(0),
         updateValue: function(input, event) {
             vm.currentSelectOption({
@@ -186,6 +203,7 @@ function TaskModel() {
             });
         },
         toggle: function(input, event) {
+            this.childrenShow(true);
             var container = event.currentTarget.parentNode,
                 childPart = container.querySelector('.child_class');
             vm.choseAndRemoveClass(container);
@@ -198,6 +216,7 @@ function TaskModel() {
         children: ko.observableArray([{
             name: ko.observable('電子遊戲'),
             key: ko.observable('lose_game'),
+            childrenShow: ko.observable(false),
             numberValue: ko.observable(0),
             updateValue: function(input, event) {
                 vm.currentSelectOption({
@@ -207,6 +226,7 @@ function TaskModel() {
                 });
             },
             toggle: function(input, event) {
+                this.childrenShow(true);
                 var container = event.currentTarget.parentNode,
                     childPart = container.querySelector('.child_class');
                 vm.choseAndRemoveClass(container);
@@ -219,6 +239,7 @@ function TaskModel() {
             children: ko.observableArray([{
                 name: ko.observable('fish'),
                 key: ko.observable('lose_game_fish'),
+                childrenShow: ko.observable(false),
                 numberValue: ko.observable(0),
                 updateValue: function(input, event) {
                     vm.currentSelectOption({
@@ -228,6 +249,7 @@ function TaskModel() {
                     });
                 },
                 toggle: function(input, event) {
+                    this.childrenShow(true);
                     var container = event.currentTarget.parentNode,
                         childPart = container.querySelector('.child_class');
                     vm.choseAndRemoveClass(container);
@@ -240,6 +262,7 @@ function TaskModel() {
             }, {
                 name: ko.observable('鋼鐵人'),
                 key: ko.observable('lose_game_鋼鐵人'),
+                childrenShow: ko.observable(false),
                 numberValue: ko.observable(0),
                 updateValue: function(input, event) {
                     vm.currentSelectOption({
@@ -249,6 +272,7 @@ function TaskModel() {
                     });
                 },
                 toggle: function(input, event) {
+                    this.childrenShow(true);
                     var container = event.currentTarget.parentNode,
                         childPart = container.querySelector('.child_class');
                     vm.choseAndRemoveClass(container);
@@ -261,6 +285,7 @@ function TaskModel() {
             }, {
                 name: ko.observable('其他1'),
                 key: ko.observable('lose_game_其他1'),
+                childrenShow: ko.observable(false),
                 numberValue: ko.observable(0),
                 updateValue: function(input, event) {
                     vm.currentSelectOption({
@@ -270,6 +295,7 @@ function TaskModel() {
                     });
                 },
                 toggle: function(input, event) {
+                    this.childrenShow(true);
                     var container = event.currentTarget.parentNode,
                         childPart = container.querySelector('.child_class');
                     vm.choseAndRemoveClass(container);
@@ -283,6 +309,7 @@ function TaskModel() {
         }, {
             name: ko.observable('彩票系統'),
             key: ko.observable('lose_lottery'),
+            childrenShow: ko.observable(false),
             numberValue: ko.observable(0),
             updateValue: function(input, event) {
                 vm.currentSelectOption({
@@ -292,6 +319,7 @@ function TaskModel() {
                 });
             },
             toggle: function(input, event) {
+                this.childrenShow(true);
                 var container = event.currentTarget.parentNode,
                     childPart = container.querySelector('.child_class');
                 vm.choseAndRemoveClass(container);
@@ -304,6 +332,7 @@ function TaskModel() {
             children: ko.observableArray([{
                 name: ko.observable('六合彩'),
                 key: ko.observable('lose_lottery_六合彩'),
+                childrenShow: ko.observable(false),
                 numberValue: ko.observable(0),
                 updateValue: function(input, event) {
                     vm.currentSelectOption({
@@ -313,6 +342,7 @@ function TaskModel() {
                     });
                 },
                 toggle: function(input, event) {
+                    this.childrenShow(true);
                     var container = event.currentTarget.parentNode,
                         childPart = container.querySelector('.child_class');
                     vm.choseAndRemoveClass(container);
@@ -325,6 +355,7 @@ function TaskModel() {
             }, {
                 name: ko.observable('11選11'),
                 key: ko.observable('lose_lottery_11選11'),
+                childrenShow: ko.observable(false),
                 numberValue: ko.observable(0),
                 updateValue: function(input, event) {
                     vm.currentSelectOption({
@@ -334,6 +365,7 @@ function TaskModel() {
                     });
                 },
                 toggle: function(input, event) {
+                    this.childrenShow(true);
                     var container = event.currentTarget.parentNode,
                         childPart = container.querySelector('.child_class');
                     vm.choseAndRemoveClass(container);
@@ -445,6 +477,7 @@ function TaskModel() {
     };
 
     this.toggleGreatLevel = function(input, event) {
+        this.childrenShow(true);
         var container,
             childPart = container.querySelector('.child_class');
         vm.choseAndRemoveClass(container);
