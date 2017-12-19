@@ -1,5 +1,5 @@
 function TaskModel() {
-    var vm = this;
+    vm = this;
     this.number = ko.observable(10);
     this.events = ko.observableArray();
     this.optionsForm = ko.observableArray([{
@@ -9,9 +9,9 @@ function TaskModel() {
         numberValue: ko.observable(0),
         updateValue: function(input, event) {
             vm.currentSelectOption({
+                type: input.name(),
                 key: input.key(),
-                name: input.name(),
-                value: input.numberValue()
+                number: input.numberValue()
             });
         },
         toggle: function(input, event) {
@@ -19,9 +19,9 @@ function TaskModel() {
                 childPart = container.querySelector('.child_class');
             vm.choseAndRemoveClass(container);
             vm.currentSelectOption({
+                type: input.name(),
                 key: input.key(),
-                name: input.name(),
-                value: input.numberValue()
+                number: input.numberValue()
             });
         },
         children: ko.observableArray([{
@@ -30,9 +30,9 @@ function TaskModel() {
             numberValue: ko.observable(0),
             updateValue: function(input, event) {
                 vm.currentSelectOption({
+                    type: input.name(),
                     key: input.key(),
-                    name: input.name(),
-                    value: input.numberValue()
+                    number: input.numberValue()
                 });
             },
             toggle: function(input, event) {
@@ -40,9 +40,9 @@ function TaskModel() {
                     childPart = container.querySelector('.child_class');
                 vm.choseAndRemoveClass(container);
                 vm.currentSelectOption({
+                    type: input.name(),
                     key: input.key(),
-                    name: input.name(),
-                    value: input.numberValue()
+                    number: input.numberValue()
                 });
             },
             children: ko.observableArray([{
@@ -51,9 +51,9 @@ function TaskModel() {
                 numberValue: ko.observable(0),
                 updateValue: function(input, event) {
                     vm.currentSelectOption({
+                        type: input.name(),
                         key: input.key(),
-                        name: input.name(),
-                        value: input.numberValue()
+                        number: input.numberValue()
                     });
                 },
                 toggle: function(input, event) {
@@ -61,9 +61,9 @@ function TaskModel() {
                         childPart = container.querySelector('.child_class');
                     vm.choseAndRemoveClass(container);
                     vm.currentSelectOption({
+                        type: input.name(),
                         key: input.key(),
-                        name: input.name(),
-                        value: input.numberValue()
+                        number: input.numberValue()
                     });
                 },
             }, {
@@ -72,9 +72,9 @@ function TaskModel() {
                 numberValue: ko.observable(0),
                 updateValue: function(input, event) {
                     vm.currentSelectOption({
+                        type: input.name(),
                         key: input.key(),
-                        name: input.name(),
-                        value: input.numberValue()
+                        number: input.numberValue()
                     });
                 },
                 toggle: function(input, event) {
@@ -82,9 +82,9 @@ function TaskModel() {
                         childPart = container.querySelector('.child_class');
                     vm.choseAndRemoveClass(container);
                     vm.currentSelectOption({
+                        type: input.name(),
                         key: input.key(),
-                        name: input.name(),
-                        value: input.numberValue()
+                        number: input.numberValue()
                     });
                 }
             }, {
@@ -93,9 +93,9 @@ function TaskModel() {
                 numberValue: ko.observable(0),
                 updateValue: function(input, event) {
                     vm.currentSelectOption({
+                        type: input.name(),
                         key: input.key(),
-                        name: input.name(),
-                        value: input.numberValue()
+                        number: input.numberValue()
                     });
                 },
                 toggle: function(input, event) {
@@ -103,9 +103,9 @@ function TaskModel() {
                         childPart = container.querySelector('.child_class');
                     vm.choseAndRemoveClass(container);
                     vm.currentSelectOption({
+                        type: input.name(),
                         key: input.key(),
-                        name: input.name(),
-                        value: input.numberValue()
+                        number: input.numberValue()
                     });
                 }
             }])
@@ -115,9 +115,9 @@ function TaskModel() {
             numberValue: ko.observable(0),
             updateValue: function(input, event) {
                 vm.currentSelectOption({
+                    type: input.name(),
                     key: input.key(),
-                    name: input.name(),
-                    value: input.numberValue()
+                    number: input.numberValue()
                 });
             },
             toggle: function(input, event) {
@@ -125,9 +125,9 @@ function TaskModel() {
                     childPart = container.querySelector('.child_class');
                 vm.choseAndRemoveClass(container);
                 vm.currentSelectOption({
+                    type: input.name(),
                     key: input.key(),
-                    name: input.name(),
-                    value: input.numberValue()
+                    number: input.numberValue()
                 });
             },
             children: ko.observableArray([{
@@ -136,9 +136,9 @@ function TaskModel() {
                 numberValue: ko.observable(0),
                 updateValue: function(input, event) {
                     vm.currentSelectOption({
+                        type: input.name(),
                         key: input.key(),
-                        name: input.name(),
-                        value: input.numberValue()
+                        number: input.numberValue()
                     });
                 },
                 toggle: function(input, event) {
@@ -146,9 +146,9 @@ function TaskModel() {
                         childPart = container.querySelector('.child_class');
                     vm.choseAndRemoveClass(container);
                     vm.currentSelectOption({
+                        type: input.name(),
                         key: input.key(),
-                        name: input.name(),
-                        value: input.numberValue()
+                        number: input.numberValue()
                     });
                 },
             }, {
@@ -157,9 +157,9 @@ function TaskModel() {
                 numberValue: ko.observable(0),
                 updateValue: function(input, event) {
                     vm.currentSelectOption({
+                        type: input.name(),
                         key: input.key(),
-                        name: input.name(),
-                        value: input.numberValue()
+                        number: input.numberValue()
                     });
                 },
                 toggle: function(input, event) {
@@ -167,9 +167,9 @@ function TaskModel() {
                         childPart = container.querySelector('.child_class');
                     vm.choseAndRemoveClass(container);
                     vm.currentSelectOption({
+                        type: input.name(),
                         key: input.key(),
-                        name: input.name(),
-                        value: input.numberValue()
+                        number: input.numberValue()
                     });
                 }
             }])
@@ -181,9 +181,9 @@ function TaskModel() {
         numberValue: ko.observable(0),
         updateValue: function(input, event) {
             vm.currentSelectOption({
+                type: input.name(),
                 key: input.key(),
-                name: input.name(),
-                value: input.numberValue()
+                number: input.numberValue()
             });
         },
         toggle: function(input, event) {
@@ -191,9 +191,9 @@ function TaskModel() {
                 childPart = container.querySelector('.child_class');
             vm.choseAndRemoveClass(container);
             vm.currentSelectOption({
+                type: input.name(),
                 key: input.key(),
-                name: input.name(),
-                value: input.numberValue()
+                number: input.numberValue()
             });
         },
         children: ko.observableArray([{
@@ -202,9 +202,9 @@ function TaskModel() {
             numberValue: ko.observable(0),
             updateValue: function(input, event) {
                 vm.currentSelectOption({
+                    type: input.name(),
                     key: input.key(),
-                    name: input.name(),
-                    value: input.numberValue()
+                    number: input.numberValue()
                 });
             },
             toggle: function(input, event) {
@@ -212,9 +212,9 @@ function TaskModel() {
                     childPart = container.querySelector('.child_class');
                 vm.choseAndRemoveClass(container);
                 vm.currentSelectOption({
+                    type: input.name(),
                     key: input.key(),
-                    name: input.name(),
-                    value: input.numberValue()
+                    number: input.numberValue()
                 });
             },
             children: ko.observableArray([{
@@ -223,9 +223,9 @@ function TaskModel() {
                 numberValue: ko.observable(0),
                 updateValue: function(input, event) {
                     vm.currentSelectOption({
+                        type: input.name(),
                         key: input.key(),
-                        name: input.name(),
-                        value: input.numberValue()
+                        number: input.numberValue()
                     });
                 },
                 toggle: function(input, event) {
@@ -233,9 +233,9 @@ function TaskModel() {
                         childPart = container.querySelector('.child_class');
                     vm.choseAndRemoveClass(container);
                     vm.currentSelectOption({
+                        type: input.name(),
                         key: input.key(),
-                        name: input.name(),
-                        value: input.numberValue()
+                        number: input.numberValue()
                     });
                 },
             }, {
@@ -244,9 +244,9 @@ function TaskModel() {
                 numberValue: ko.observable(0),
                 updateValue: function(input, event) {
                     vm.currentSelectOption({
+                        type: input.name(),
                         key: input.key(),
-                        name: input.name(),
-                        value: input.numberValue()
+                        number: input.numberValue()
                     });
                 },
                 toggle: function(input, event) {
@@ -254,9 +254,9 @@ function TaskModel() {
                         childPart = container.querySelector('.child_class');
                     vm.choseAndRemoveClass(container);
                     vm.currentSelectOption({
+                        type: input.name(),
                         key: input.key(),
-                        name: input.name(),
-                        value: input.numberValue()
+                        number: input.numberValue()
                     });
                 }
             }, {
@@ -265,9 +265,9 @@ function TaskModel() {
                 numberValue: ko.observable(0),
                 updateValue: function(input, event) {
                     vm.currentSelectOption({
+                        type: input.name(),
                         key: input.key(),
-                        name: input.name(),
-                        value: input.numberValue()
+                        number: input.numberValue()
                     });
                 },
                 toggle: function(input, event) {
@@ -275,9 +275,9 @@ function TaskModel() {
                         childPart = container.querySelector('.child_class');
                     vm.choseAndRemoveClass(container);
                     vm.currentSelectOption({
+                        type: input.name(),
                         key: input.key(),
-                        name: input.name(),
-                        value: input.numberValue()
+                        number: input.numberValue()
                     });
                 }
             }])
@@ -287,9 +287,9 @@ function TaskModel() {
             numberValue: ko.observable(0),
             updateValue: function(input, event) {
                 vm.currentSelectOption({
+                    type: input.name(),
                     key: input.key(),
-                    name: input.name(),
-                    value: input.numberValue()
+                    number: input.numberValue()
                 });
             },
             toggle: function(input, event) {
@@ -297,9 +297,9 @@ function TaskModel() {
                     childPart = container.querySelector('.child_class');
                 vm.choseAndRemoveClass(container);
                 vm.currentSelectOption({
+                    type: input.name(),
                     key: input.key(),
-                    name: input.name(),
-                    value: input.numberValue()
+                    number: input.numberValue()
                 });
             },
             children: ko.observableArray([{
@@ -308,9 +308,9 @@ function TaskModel() {
                 numberValue: ko.observable(0),
                 updateValue: function(input, event) {
                     vm.currentSelectOption({
+                        type: input.name(),
                         key: input.key(),
-                        name: input.name(),
-                        value: input.numberValue()
+                        number: input.numberValue()
                     });
                 },
                 toggle: function(input, event) {
@@ -318,9 +318,9 @@ function TaskModel() {
                         childPart = container.querySelector('.child_class');
                     vm.choseAndRemoveClass(container);
                     vm.currentSelectOption({
+                        type: input.name(),
                         key: input.key(),
-                        name: input.name(),
-                        value: input.numberValue()
+                        number: input.numberValue()
                     });
                 },
             }, {
@@ -329,9 +329,9 @@ function TaskModel() {
                 numberValue: ko.observable(0),
                 updateValue: function(input, event) {
                     vm.currentSelectOption({
+                        type: input.name(),
                         key: input.key(),
-                        name: input.name(),
-                        value: input.numberValue()
+                        number: input.numberValue()
                     });
                 },
                 toggle: function(input, event) {
@@ -339,9 +339,9 @@ function TaskModel() {
                         childPart = container.querySelector('.child_class');
                     vm.choseAndRemoveClass(container);
                     vm.currentSelectOption({
+                        type: input.name(),
                         key: input.key(),
-                        name: input.name(),
-                        value: input.numberValue()
+                        number: input.numberValue()
                     });
                 }
             }])
@@ -364,9 +364,11 @@ function TaskModel() {
             theadWins: ko.observableArray([1]),
             levels: ko.observableArray([{
                 options: ko.observableArray([ko.observable({
+                    number: ko.observable(),
                     type: '?'
                 })]),
                 wins: ko.observableArray([ko.observable({
+                    number: ko.observable(),
                     type: '?'
                 })])
             }])
@@ -380,11 +382,13 @@ function TaskModel() {
 
         for (var i = 0; i < currentObj.theadOptions().length; i++) {
             tempOptionArray.push(ko.observable({
+                number: ko.observable(),
                 type: '?'
             }));
         }
         for (i = 0; i < currentObj.theadWins().length; i++) {
             tempOptionArray.push(ko.observable({
+                number: ko.observable(),
                 type: '?'
             }));
         }
@@ -400,6 +404,7 @@ function TaskModel() {
         currentObj.theadOptions.push(1);
         for (var i = 0; i < currentObj.levels().length; i++) {
             currentObj.levels()[i].options.push(ko.observable({
+                number: ko.observable(),
                 type: '?',
                 value: '300'
             }));
@@ -411,6 +416,7 @@ function TaskModel() {
         currentObj.theadWins.push(1);
         for (var i = 0; i < currentObj.levels().length; i++) {
             currentObj.levels()[i].wins.push(ko.observable({
+                number: ko.observable(),
                 type: '?',
                 value: 123
             }));
@@ -440,9 +446,9 @@ function TaskModel() {
             childPart = container.querySelector('.child_class');
         vm.choseAndRemoveClass(container);
         vm.currentSelectOption({
+            type: input.name(),
             key: input.key(),
-            name: input.name(),
-            value: input.numberValue()
+            number: input.numberValue()
         });
     };
 
@@ -460,13 +466,7 @@ function TaskModel() {
             optionId = vm.currentOptionId();
 
         var currentOption = vm.events()[eventId].levels()[levelId].options()[optionId];
-        currentOption({
-            type: vm.currentSelectOption().name,
-            key: vm.currentSelectOption().key,
-            value: vm.currentSelectOption().value
-        });
-
-        console.log(currentOption());
+        currentOption(vm.currentSelectOption());
 
         vm.fullMaskShow(false);
         vm.resetCurrentIDsAndSelected();
@@ -477,6 +477,7 @@ function TaskModel() {
     };
 
     this.resetCurrentIDsAndSelected  = function() {
+        return;
         this.currentEventId(null);
         this.currentLevelId(null);
         this.currentOptionId(null);
